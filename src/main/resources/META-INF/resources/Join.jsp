@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,48 +20,11 @@
     />
   </head>
   <body>
+    <%--
     <!-- ----------여기부터 header------------ -->
-    <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-sm">
-      <div class="container-fluid">
-        <a href="index.html" class="navbar-brand ms-5">
-          <div style="font-family: 'Zen Dots', cursive" class="text-white">
-            Holy Fitness
-          </div>
-        </a>
-        <!--collapse의 경우에는 토글이 아니라 토글러. navbar-toggler -->
-        <a href="#collapseID" class="navbar-toggler" data-bs-toggle="collapse"
-          ><span class="navbar-toggler-icon"></span
-        ></a>
-        <div class="navbar-nav">
-          <div class="collapse navbar-collapse me-5" id="collapseID">
-            <a href="Survey.html" class="nav-link">설문하기</a>
-            <div class="nav-item dropdown">
-              <a
-                href="#dropdownTarget"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                >통계보기</a
-              >
-              <div id="dropdownTarget" class="dropdown-menu">
-                <a
-                  href="Statistics_by_member.html"
-                  class="dropdown-item nav-link text-dark"
-                  >개인 설문 조회</a
-                >
-                <a
-                  href="Statistics_by_period.html"
-                  class="dropdown-item nav-link text-dark"
-                  >전체 설문 조회</a
-                >
-              </div>
-            </div>
-            <a href="Login.html" class="nav-link">Login</a>
-            <a href="Join_agreement.html" class="nav-link">Join</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    --&> <%--
     <!-- ----------여기까지 header부분-------------- -->
+    --&>
     <main>
       <div class="container" style="margin-top: 50px; margin-bottom: 120px">
         <div
@@ -182,16 +146,11 @@
         </div>
       </div>
     </main>
+    <%--
     <!-- -----------여기서부터 footer입니다---------- -->
-    <nav class="navbar bg-dark navbar-dark fixed-bottom">
-      <div class="container-fluid justify-content-center">
-        <div class="navbar-brand fs-6 text-center">
-          <div>상호 : 홀리 피트니스 | 전화 : 02-123-4567</div>
-          <div>주소 : 허리도 가늘군 만지면 부러지리 123-45</div>
-        </div>
-      </div>
-    </nav>
+    --%> <%--
     <!-- ------------------여기까지 footer ------------------ -->
+    --&>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
