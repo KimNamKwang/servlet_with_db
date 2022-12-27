@@ -27,8 +27,7 @@
                 <a
                   class="btn btn-secondary dropdown-toggle btn-sm pe-5 ps-5 pt-2 pb-2"
                   data-bs-toggle="dropdown"
-                  >통계</a
-                >
+                  >통계</a>
                 <ul class="dropdown-menu">
                   <a href="Statistics_by_member.html" class="dropdown-item">회원별 통계</a>
                   <a href="Statistics_by_period.html" class="dropdown-item active" >전체 통계</a>
@@ -93,8 +92,8 @@
                         <td>(3) 보통</td>
                      </tr>
                      <tr>
-                         <th class="align-middle bg-secondary bg-opacity-25" scope=>총 합계</th>
-                         <td>
+                        <th class="align-middle bg-secondary bg-opacity-25" scope=>총 합계</th>
+                        <td>
                             <div>
                                 (1)매우 만족-1개
                             </div>
@@ -111,74 +110,74 @@
                                 (5) 매우 불만 - 0개
                             </div>
                         </td>
-                         <td>
+                        <td>
                             <div>
-                            (1)매우 만족-1개
-                        </div>
-                        <div>
-                            (2) 만족 - 1개
-                        </div>
-                        <div>
-                            (3) 보통 - 1개
-                        </div>
-                        <div>                               
-                            (4) 불만 - 0개
-                        </div>
-                        <div>                           
-                            (5) 매우 불만 - 0개
-                        </div>
-                    </td>
-                         <td>
+                                (1)매우 만족-1개
+                            </div>
                             <div>
-                            (1)매우 만족-1개
-                        </div>
-                        <div>
-                            (2) 만족 - 1개
-                        </div>
-                        <div>
-                            (3) 보통 - 1개
-                        </div>
-                        <div>                               
-                            (4) 불만 - 0개
-                        </div>
-                        <div>                           
-                            (5) 매우 불만 - 0개
-                        </div>
-                    </td>
-                         <td>
+                                (2) 만족 - 1개
+                            </div>
                             <div>
-                            (1)매우 만족-1개
-                        </div>
-                        <div>
-                            (2) 만족 - 1개
-                        </div>
-                        <div>
-                            (3) 보통 - 1개
-                        </div>
-                        <div>                               
-                            (4) 불만 - 0개
-                        </div>
-                        <div>                           
-                            (5) 매우 불만 - 0개
-                        </div>
-                    </td>
-                         <td>
+                                (3) 보통 - 1개
+                            </div>
+                            <div>                               
+                                (4) 불만 - 0개
+                            </div>
+                            <div>                           
+                                (5) 매우 불만 - 0개
+                            </div>
+                        </td>
+                        <td>
                             <div>
-                            (1)매우 만족-1개
-                        </div>
-                        <div>
-                            (2) 만족 - 1개
-                        </div>
-                        <div>
-                            (3) 보통 - 1개
-                        </div>
-                        <div>                               
-                            (4) 불만 - 0개
-                        </div>
-                        <div>                           
-                            (5) 매우 불만 - 0개
-                        </div>
-                    </td>
+                                (1)매우 만족-1개
+                            </div>
+                            <div>
+                                (2) 만족 - 1개
+                            </div>
+                            <div>
+                                (3) 보통 - 1개
+                            </div>
+                            <div>                               
+                                (4) 불만 - 0개
+                            </div>
+                            <div>                           
+                                (5) 매우 불만 - 0개
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                (1)매우 만족-1개
+                            </div>
+                            <div>
+                                (2) 만족 - 1개
+                            </div>
+                            <div>
+                                (3) 보통 - 1개
+                            </div>
+                            <div>                               
+                                (4) 불만 - 0개
+                            </div>
+                            <div>                           
+                                (5) 매우 불만 - 0개
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                (1)매우 만족-1개
+                            </div>
+                            <div>
+                                (2) 만족 - 1개
+                            </div>
+                            <div>
+                                (3) 보통 - 1개
+                            </div>
+                            <div>                               
+                                (4) 불만 - 0개
+                            </div>
+                            <div>                           
+                                (5) 매우 불만 - 0개
+                            </div>
+                        </td>
                      </tr>
                  </tbody>
              </table>
