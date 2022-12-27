@@ -17,75 +17,69 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* * {
-        border: 1px dotted gray;
-      } */
-    </style>
   </head>
   <body>
-    
-
     <!-- ----------여기부터 main시작---------------- -->
-    <div class="container-fluid">
-      <div class="card">
-        <img
-          src="./images/KakaoTalk_20221110_145226262.png"
-          alt=""
-          class="bg-repeat"
-        />
-        <div
-          class="card-img-overlay d-flex align-items-center justify-content-center flex-column"
-        >
+    <main>
+      <div class="container-fluid">
+        <div class="card">
+          <img
+            src="./images/KakaoTalk_20221110_145226262.png"
+            alt=""
+            class="bg-repeat"
+          />
           <div
-            class="text-light text-center"
-            style="text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)"
+            class="card-img-overlay d-flex align-items-center justify-content-center flex-column"
           >
-            <h4 class="card-title fs-1 fw-bold">가늘군 최고의 시설,</h4>
-            <p class="card-text fs-1 fw-bold">합리적인 피트니스!</p>
+            <div
+              class="text-light text-center"
+              style="text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3)"
+            >
+              <h4 class="card-title fs-1 fw-bold">가늘군 최고의 시설,</h4>
+              <p class="card-text fs-1 fw-bold">합리적인 피트니스!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./images/3.png" class="d-block w-100" alt="..." />
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/3.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/2.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/1.PNG" class="d-block w-100" alt="..." />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="./images/2.png" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="./images/1.PNG" class="d-block w-100" alt="..." />
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </div>
+    </main>
     <!-- -------------------여기까지 main ------------------- -->
 
-    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
