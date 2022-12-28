@@ -23,7 +23,7 @@
       <div class="container">
         <div class="fs-4 fw-bold pb-3">👥 회원 관리</div>
         <div class="text-secondary">총 3명</div>
-        <div class="bg-light ps-4 pe-4">
+        <div class="bg-light ps-4 pe-4 pb-1 mt-2">
           <table class="table text-center border-none">
             <thead class="border-bottom border-3">
               <tr>
@@ -37,10 +37,26 @@
             <tbody class="">
               <tr>
                 <td>
+                  <a href="#modalRead" data-bs-toggle="modal" class="text-dark"
+                    >홍길동</a
+                  >
+                </td>
+                <td>honghong</td>
+                <td>2022-12-28 12:00:00</td>
+                <td>O</td>
+                <td>
                   <a
-                    href="#modalTarget"
+                    href="#modalUpdate"
                     data-bs-toggle="modal"
-                    class="text-dark"
+                    class="btn btn btn-outline-dark btn-sm"
+                    >수정</a
+                  >
+                  <button class="btn btn btn-outline-dark btn-sm">탈퇴</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#modalRead" data-bs-toggle="modal" class="text-dark"
                     >홍길동</a
                   >
                 </td>
@@ -54,27 +70,7 @@
               </tr>
               <tr>
                 <td>
-                  <a
-                    href="#modalTarget"
-                    data-bs-toggle="modal"
-                    class="text-dark"
-                    >홍길동</a
-                  >
-                </td>
-                <td>honghong</td>
-                <td>2022-12-28 12:00:00</td>
-                <td>O</td>
-                <td>
-                  <button class="btn btn btn-outline-dark btn-sm">수정</button>
-                  <button class="btn btn btn-outline-dark btn-sm">탈퇴</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a
-                    href="#modalTarget"
-                    data-bs-toggle="modal"
-                    class="text-dark"
+                  <a href="#modalRead" data-bs-toggle="modal" class="text-dark"
                     >홍길동</a
                   >
                 </td>
@@ -90,7 +86,8 @@
           </table>
         </div>
 
-        <div class="modal" id="modalTarget">
+        <!-- 회원 상세 정보 modal -->
+        <div class="modal" id="modalRead">
           <div class="modal-dialog">
             <div class="modal-content ps-3 pe-3">
               <div class="modal-header">
@@ -126,6 +123,153 @@
               <div class="modal-footer">
                 <button class="btn btn-secondary" data-bs-dismiss="modal">
                   닫기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 회원 정보 수정 -->
+        <div class="modal" id="modalUpdate">
+          <div class="modal-dialog">
+            <div class="modal-content ps-3 pe-3">
+              <div class="modal-header">
+                <div class="fs-5 fw-bold">회원 정보 수정</div>
+              </div>
+              <div class="modal-body">
+                <table class="table align-middle">
+                  <tr>
+                    <th>이름 *</th>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm w-50"
+                        id="userName"
+                        value="userName"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-nowrap">아이디 *</th>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm w-50"
+                        id="userId"
+                        disabled
+                        placeholder="userId"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-nowrap">비밀번호 *</th>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm w-50"
+                        id="userPassword"
+                        value="userPassword"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>이메일</th>
+                    <td class="row d-flex align-items-center">
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          id="emailId"
+                          value="aaa"
+                        />
+                      </div>
+                      @
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          id="emailPlatform"
+                          value="email"
+                        />
+                      </div>
+                      <div class="col-auto">
+                        <select
+                          class="form-select form-select-sm"
+                          name=""
+                          id="emailPlatform_s"
+                        >
+                          <option value="choice_email">직접입력</option>
+                          <option value="@naver.com">naver.com</option>
+                          <option value="@gmail.com">gmail.com</option>
+                          <option value="@daum.net">daum.net</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-nowrap">연락처 *</th>
+                    <td class="row">
+                      <div class="col">
+                        <select
+                          class="form-select form-select-sm"
+                          name=""
+                          id="phoneFirst"
+                        >
+                          <option value="010">010</option>
+                          <option value="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                          <option value="018">018</option>
+                          <option value="019">019</option>
+                        </select>
+                      </div>
+                      <div class="col-auto">-</div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          id="phoneSecond"
+                          value="1234"
+                        />
+                      </div>
+                      <div class="col-auto">-</div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          id="phoneThird"
+                          value="5678"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style="border-bottom: none">주소</th>
+                    <td style="border-bottom: none">
+                      <input
+                        type="text"
+                        class="form-control form-control-sm mb-2"
+                        id="addressId"
+                        value="address"
+                      />
+                      <div class="row d-flex flex-row align-items-center">
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="col form-control form-control-sm"
+                            id="addressAddId"
+                            value="addressAdd"
+                          />
+                        </div>
+                        <div class="col-auto">[나머지주소입력]</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                  저장
                 </button>
               </div>
             </div>
