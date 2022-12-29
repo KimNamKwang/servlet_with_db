@@ -74,7 +74,7 @@
                 <th>비밀번호 *</th>
                 <td>
                   <input
-                    type="text"
+                    type="password"
                     class="form-control w-50"
                     name="userPassword"
                     id="userPassword"
@@ -86,7 +86,7 @@
                 <th>비밀번호확인 *</th>
                 <td>
                   <input
-                    type="text"
+                    type="password"
                     class="form-control w-50"
                     id="userPasswordCheck"
                     name="userPasswordCheck"
