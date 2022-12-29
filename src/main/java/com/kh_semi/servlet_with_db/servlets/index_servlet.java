@@ -19,7 +19,7 @@ public class index_servlet extends HttpServlet {
             throws IOException, ServletException {
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index_base.jsp");
         requestDispatcher.forward(request, response);
 
     }

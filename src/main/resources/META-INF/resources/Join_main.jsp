@@ -45,7 +45,7 @@
 
         <div>
           <table class="table align-middle">
-            <form action="/join/completionServlet" onsubmit="return validateForm()" method="get">
+            <form action="/join/completionServlet" onsubmit="return validateForm()" method="post">
               <tr>
                 <th>이름 *</th>
                 <td>
