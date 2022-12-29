@@ -53,7 +53,7 @@
           <div class="border-top border-secondary border-opacity-50 mt-4 pt-4">
             <a
               class="btn btn-lg btn-outline-dark fw-bold w-25"
-              href="Login.html"
+              href="/loginServlet"
               >로그인</a
             >
           </div>

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +77,9 @@
         <div class="d-flex justify-content-end mt-2">
           <span class="d-flex align-items-center me-2">회원이 아니신가요?</span>
           <span>
-            <a href="Join_agreement.html" class="btn btn-sm btn-dark opacity-50"
+            <a
+              href="/join/agreementServlet"
+              class="btn btn-sm btn-dark opacity-50"
               >회원가입</a
             >
           </span>
