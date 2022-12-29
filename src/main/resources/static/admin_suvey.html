@@ -65,12 +65,12 @@
               class="text-nowrap d-flex align-items-center"
               style="border-bottom: none"
             >
-              설문항목관리
+              설문항목관리 *
             </th>
             <td>
               <div class="text-end">
                 <a
-                  href="#modalUpdate"
+                  href="#modalContent"
                   data-bs-toggle="modal"
                   class="btn btn-secondary btn-sm"
                   >새 항목 추가</a
@@ -81,7 +81,6 @@
                   <thead>
                     <tr class="text-center">
                       <th class="text-nowrap">문항내용</th>
-                      <th class="text-nowrap">질문타입</th>
                       <th class="text-nowrap">답항내용</th>
                       <th class="text-nowrap">수정/삭제</th>
                     </tr>
@@ -89,7 +88,6 @@
                   <tbody>
                     <tr>
                       <td>1. 문항내용문항내용문항내용문항내용문항내용?</td>
-                      <td>단일선택</td>
                       <td>
                         답항1:매우만족, 답항2:만족, 답항3:보통, 답항4:불만족,
                         답항5:매우불만족
@@ -97,13 +95,13 @@
                       <td>
                         <div class="row">
                           <div class="col-6">
-                            <button
+                            <a
+                              href="#modalUpdate"
+                              data-bs-toggle="modal"
                               class="btn btn-outline-dark btn-sm"
-                              data-toggle="modal"
-                              data-target="#exampleModal"
                             >
                               <i class="material-icons">edit</i>
-                            </button>
+                            </a>
                           </div>
                           <div class="col-6">
                             <button class="btn btn-outline-dark btn-sm">
@@ -119,6 +117,124 @@
             </td>
           </tr>
         </table>
+      </div>
+
+      <!-- 새 항목 추가 modal -->
+      <div class="modal fade" id="modalContent">
+        <div class="modal-dialog">
+          <div class="modal-content ps-3 pe-3">
+            <div class="modal-header">
+              <div class="fs-5 fw-bold">설문조사 항목 추가</div>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <tr>
+                  <th>문항내용</th>
+                  <td>
+                    <textarea
+                      class="form-control"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="3"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>답항목록</th>
+                  <div>
+                    <td>
+                      <div class="row">
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="form-control m-0"
+                            placeholder="답변항목"
+                          />
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-outline-dark btn-sm">
+                            <i class="material-icons">close</i>
+                          </button>
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-outline-dark btn-sm">
+                            <i class="material-icons">add</i>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </div>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 항목 수정 modal -->
+      <div class="modal fade" id="modalUpdate">
+        <div class="modal-dialog">
+          <div class="modal-content ps-3 pe-3">
+            <div class="modal-header">
+              <div class="fs-5 fw-bold">설문조사 항목 수정</div>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <tr>
+                  <th>문항내용</th>
+                  <td>
+                    <textarea
+                      class="form-control"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="3"
+                    >
+1. 문항내용문항내용문항내용문항내용문항내용?</textarea
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>답항목록</th>
+                  <div>
+                    <td>
+                      <div class="row">
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="form-control m-0"
+                            value="매우만족"
+                          />
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-outline-dark btn-sm">
+                            <i class="material-icons">close</i>
+                          </button>
+                        </div>
+                        <div class="col-auto">
+                          <button class="btn btn-outline-dark btn-sm">
+                            <i class="material-icons">add</i>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </div>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
