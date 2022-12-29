@@ -61,6 +61,13 @@ public class DatasWithDB {
         return answer_list;
     }
 
+    /**
+     * join_main.servlet에서 submit시 넘어오는 값들 받아서 join_completion에서 이 Function호출.
+     * 
+     * @param statement
+     * @param connection
+     * @param hashMap
+     */
     public void Join_completion(Statement statement, Connection connection, HashMap hashMap) {
         System.out.println(hashMap.get("userName"));
         System.out.println(hashMap.get("userId"));
@@ -99,5 +106,26 @@ public class DatasWithDB {
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
+    }
+
+    public ArrayList<HashMap<String, Object>> getAnswersAndQuestions() throws SQLException {
+
+        Commons commons = new Commons();
+
+        Statement statement = commons.getStatement();
+
+        String query = "SELECT * FROM QUESTION ";
+
+        ResultSet resultSet = statement.executeQuery(query);
+        ArrayList<HashMap<String, Object>> answersAndQuestionsList = new ArrayList<HashMap<String, Object>>();
+
+        while (resultSet.next()) {
+            HashMap<String, Object> answersAndQuestions = new HashMap<String, Object>();
+            answersAndQuestions.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
+            answersAndQuestions.put("QUESTION", resultSet.getString("QUESTION"));
+            answersAndQuestionsList.add(answersAndQuestions);
+        }
+        return answersAndQuestionsList;
+
     }
 }

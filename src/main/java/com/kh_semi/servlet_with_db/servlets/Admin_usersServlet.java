@@ -30,8 +30,8 @@ public class Admin_usersServlet extends HttpServlet {
         ArrayList<HashMap> user_list = null;
         try {
             user_list = jiyeongDB.getUsers(userId);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
         }
         for (int i = 0; i < user_list.size(); i++) {
             HashMap<String, Object> user = user_list.get(i);

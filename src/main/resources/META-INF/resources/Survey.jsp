@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
+import = "java.util.HashMap, java.util.ArrayList "%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,15 +21,20 @@
     />
   </head>
   <body class="bg-secondary bg-opacity-25">
+    <% 
+    ArrayList<HashMap> answersAndQuestionsList = (ArrayList<HashMap>)request.getAttribute("answersAndQuestionsList");
+    
+ %> 
     <main>
       <div class="container" style="margin-top: 120px; margin-bottom: 120px">
         <div class="bg-white p-5 mt-5 mb-5">
           <div class="fs-2 fw-bold">홀리 피트니스 만족도 설문 조사</div>
           <form action="" method="post">
+            <% for(int i = 0; i < answersAndQuestionsList.size(); i++){ %>
+         <%  HashMap<String, Object> answersAndQuestions = answersAndQuestionsList.get(i); %>
             <div class="mt-5">
               <div class="mb-3">
-                1. 상담시 친절하게 안내 받으시고 궁금한 사항에 대한 답변이
-                만족스러우셨습니까?
+                <%=  answersAndQuestions.get("QUESTION")  %>
               </div>
               <div>
                 <input
@@ -76,209 +82,8 @@
                 <label for="very_dissatisfied_1">매우불만족</label>
               </div>
             </div>
-
-            <div class="mt-5">
-              <div class="mb-3">
-                2. PT(1:1 퍼스널 트레이닝) 진행시 친절하게 안내 받으시고 궁금한
-                사항에 대한 답변이 만족스러우셨습니까?
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer02"
-                  id="very_satisfaction_2"
-                />
-                <label for="very_satisfaction_2">매우만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer02"
-                  id="satisfaction_2"
-                />
-                <label for="satisfaction_2">만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer02"
-                  id="common_2"
-                />
-                <label for="common_2">보통</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer02"
-                  id="dissatisfaction_2"
-                />
-                <label for="dissatisfaction_2">불만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer02"
-                  id="very_dissatisfied_2"
-                />
-                <label for="very_dissatisfied_2">매우불만족</label>
-              </div>
-            </div>
-            <div class="mt-5">
-              <div class="mb-3">
-                3. OT(1:1 무료 PT) 진행시 친절하게 안내 받으시고 궁금한 사항에
-                대한 답변이 만족스러우셨습니까?
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer03"
-                  id="very_satisfaction_3"
-                />
-                <label for="very_satisfaction_3">매우만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer03"
-                  id="satisfaction_3"
-                />
-                <label for="satisfaction_3">만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer03"
-                  id="common_3"
-                />
-                <label for="common_3">보통</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer03"
-                  id="dissatisfaction_3"
-                />
-                <label for="dissatisfaction_3">불만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer03"
-                  id="very_dissatisfied_3"
-                />
-                <label for="very_dissatisfied_3">매우불만족</label>
-              </div>
-            </div>
-            <div class="mt-5">
-              <div class="mb-3">
-                4. 헬스장 오픈, 마감 시간을 정확히 준수하였습니까?
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer04"
-                  id="very_satisfaction_4"
-                />
-                <label for="very_satisfaction_4">매우만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer04"
-                  id="satisfaction_4"
-                />
-                <label for="satisfaction_4">만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer04"
-                  id="common_4"
-                />
-                <label for="common_4">보통</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer04"
-                  id="dissatisfaction_4"
-                />
-                <label for="dissatisfaction_4">불만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer04"
-                  id="very_dissatisfied_4"
-                />
-                <label for="very_dissatisfied_4">매우불만족</label>
-              </div>
-            </div>
-            <div class="mt-5">
-              <div class="mb-3">
-                5. 전반적인 센터 이용이 만족스러우셨습니까?
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer05"
-                  id="very_satisfaction_5"
-                />
-                <label for="very_satisfaction_5">매우만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer05"
-                  id="satisfaction_5"
-                />
-                <label for="satisfaction_5">만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer05"
-                  id="common_5"
-                />
-                <label for="common_5">보통</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer05"
-                  id="dissatisfaction_5"
-                />
-                <label for="dissatisfaction_5">불만족</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="answer05"
-                  id="very_dissatisfied_5"
-                />
-                <label for="very_dissatisfied_5">매우불만족</label>
-              </div>
-            </div>
+            <%  } %>
+            
             <div class="mt-5">
               <a
                 class="btn btn-secondary fw-bold ps-4 pe-4"
