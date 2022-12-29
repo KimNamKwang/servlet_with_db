@@ -38,7 +38,7 @@
           </div>
           <div class="bg-secondary bg-opacity-10 p-4 ms-5 me-5 mb-4">
             <div class="d-flex flex-row justify-content-center">
-              <form action="" method="post">
+              <form action="/loginServlet" method="post">
                 <div class="row">
                   <div class="col-md-4 mt-2 mb-1">
                     <div class="row align-items-center">
@@ -65,9 +65,9 @@
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <a class="col-12 btn btn-dark mt-2 mb-2" href="index.html">
+                    <button class="col-12 btn btn-dark mt-2 mb-2" type="submit">
                       로그인
-                    </a>
+                    </button>
                   </div>
                 </div>
               </form>
