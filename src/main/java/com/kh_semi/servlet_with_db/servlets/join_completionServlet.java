@@ -36,6 +36,7 @@ public class join_completionServlet extends HttpServlet {
         String phoneFirst = request.getParameter("phoneFirst");
         String phoneSecond = request.getParameter("phoneSecond");
         String phoneThird = request.getParameter("phoneThird");
+        String addressId = request.getParameter("addressId");
         String addressAddId = request.getParameter("addressAddId");
 
         HashMap<String, Object> joindata = new HashMap<>();
@@ -50,6 +51,7 @@ public class join_completionServlet extends HttpServlet {
         joindata.put("phoneFirst", phoneFirst);
         joindata.put("phoneSecond", phoneSecond);
         joindata.put("phoneThird", phoneThird);
+        joindata.put("addressId", addressId);
         joindata.put("addressAddId", addressAddId);
 
         DatasWithDB Join_completion = new DatasWithDB();

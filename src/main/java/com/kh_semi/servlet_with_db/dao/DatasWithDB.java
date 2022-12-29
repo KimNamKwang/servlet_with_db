@@ -72,19 +72,15 @@ public class DatasWithDB {
         System.out.println(hashMap.get("phoneFirst"));
         System.out.println(hashMap.get("phoneSecond"));
         System.out.println(hashMap.get("phoneThird"));
+        System.out.println(hashMap.get("addressId"));
         System.out.println(hashMap.get("addressAddId"));
 
-        String userName = hashMap.get("userName");
-        String userId =hashMap.get("")
-        String userPassword =hashMap.get("")
-        String userPasswordCheck =hashMap.get
-        String emailId =hashMap.get
-        String emailPlatform =hashMap.get
-        String emailPlatform_s =hashMap.get
-        String phoneFirst =hashMap.get
-        String phoneFirst =hashMap.get
-        String phoneSecond =hashMap.get
-        String phoneThird =hashMap.get
+        String userName = (String) hashMap.get("userName");
+        String userId =(String) hashMap.get("userName");
+        String userPassword =(String) hashMap.get("userName");
+        String userPasswordCheck =(String) hashMap.get("userName");
+        String email =(String) hashMap.get("emailId") + (String) hashMap.get("emailPlatform") + (String) hashMap.get("emailPlatform_s");
+        String phoneNumber =(String)hashMap.get("phoneFirst") +(String)hashMap.get("phoneSecond")+(String)hashMap.get("phoneThird") ;
         String addressAddId =hashMap.get
 
 
