@@ -6,9 +6,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class JiyeongDB {
-    public ArrayList<HashMap> getUsers(String getUser) throws SQLException{
+    /**
+     * User테이블의 모든것을 가져오는 Function
+     * 
+     * @param getUser
+     * @return
+     * @throws SQLException
+     */
+    public ArrayList<HashMap> getUsers(String getUser) throws SQLException {
 
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
@@ -17,7 +23,7 @@ public class JiyeongDB {
 
         ArrayList<HashMap> user_list = new ArrayList<HashMap>();
 
-        while(resultSet.next()){
+        while (resultSet.next()) {
             HashMap<String, Object> user = new HashMap<String, Object>();
             user.put("NAME", resultSet.getString("NAME"));
             user.put("USER_ID", resultSet.getString("USER_ID"));
@@ -31,5 +37,7 @@ public class JiyeongDB {
 
         }
         return user_list;
+
     }
+
 }

@@ -15,19 +15,25 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/Admin/users")
-public class Admin_users extends HttpServlet{
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)throws IOException, ServletException {
+@WebServlet(urlPatterns = "/Admin/usersServlet")
+/**
+ * modal창에는 for문이 적용이 안 됩니다...
+ * 강사님께 물어보고 적용방법이 있는지 알아봐야 할 둣
+ * 
+ */
+public class Admin_usersServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
         String userId = request.getParameter("USER_ID");
 
-       JiyeongDB jiyeongDB = new JiyeongDB();
+        JiyeongDB jiyeongDB = new JiyeongDB();
         ArrayList<HashMap> user_list = null;
         try {
             user_list = jiyeongDB.getUsers(userId);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        for(int i = 0; i < user_list.size(); i++){
+        for (int i = 0; i < user_list.size(); i++) {
             HashMap<String, Object> user = user_list.get(i);
             System.out.println(user.get("NAME"));
             System.out.println(user.get("USER_ID"));
@@ -37,7 +43,9 @@ public class Admin_users extends HttpServlet{
             System.out.println(user.get("ADDRESS"));
             System.out.println(user.get("ADDRESSADD"));
         }
-
+        /* 이 부분 추가했을 유. request에 실어보내는게 없어서 */
+        request.setAttribute("user_list", user_list);
+        // getUsers
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_users.jsp");

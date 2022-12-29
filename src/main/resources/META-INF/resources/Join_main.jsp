@@ -165,7 +165,7 @@
               <tr>
                 <th>주소</th>
                 <td>
-                  <input type="text" class="form-control" id="addressId" />
+                  <input type="text" class="form-control" id="addressId" name="addressId"/>
                   <div class="row d-flex flex-row align-items-center">
                     <div class="col">
                       <input
