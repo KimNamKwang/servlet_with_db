@@ -118,13 +118,19 @@
             제정한 전자거래소비자보호지침 및 관계법령 또는 상관례에 따릅니다.
           </div>
         </div>
-        <form action="/join/mainServlet" method="get" name="agreement">
+        <form
+          action="/join/mainServlet"
+          method="get"
+          onsubmit="return validateForm()"
+          name="agreement"
+        >
           <div class="text-center mt-5">
             <input
               type="checkbox"
               class="form-check-input"
               name="agree01_yes"
               id="agree01_yes"
+              required
             />
             <label for="agree01_yes" class="form-check-label"
               >회원가입약관을 읽었으며 내용에 동의합니다.</label
@@ -215,20 +221,22 @@
               class="form-check-input"
               name="agree02_yes"
               id="agree02_yes"
+              required
             />
             <label for="agree02_yes" class="form-check-label"
               >회원가입약관을 읽었으며 내용에 동의합니다.</label
             >
           </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="btn btn-lg btn-outline-dark fw-bold w-25 mt-5"
+              href="/join/mainServlet"
+            >
+              확인
+            </button>
+          </div>
         </form>
-        <div class="text-center">
-          <a
-            class="btn btn-lg btn-outline-dark fw-bold w-25 mt-5"
-            href="/join/mainServlet"
-          >
-            확인
-          </a>
-        </div>
       </div>
     </main>
     <%--
