@@ -76,23 +76,28 @@ public class DatasWithDB {
         System.out.println(hashMap.get("addressAddId"));
 
         String userName = (String) hashMap.get("userName");
-        String userId =(String) hashMap.get("userName");
-        String userPassword =(String) hashMap.get("userName");
-        String userPasswordCheck =(String) hashMap.get("userName");
-        String email =(String) hashMap.get("emailId") + (String) hashMap.get("emailPlatform") + (String) hashMap.get("emailPlatform_s");
-        String phoneNumber =(String)hashMap.get("phoneFirst") +(String)hashMap.get("phoneSecond")+(String)hashMap.get("phoneThird") ;
-        String addressAddId =hashMap.get
-
-
-
-
-
+        String userId = (String) hashMap.get("userName");
+        String userPassword = (String) hashMap.get("userName");
+        String userPasswordCheck = (String) hashMap.get("userName");
+        String email = (String) hashMap.get("emailId") + (String) hashMap.get("emailPlatform")
+                + (String) hashMap.get("emailPlatform_s");
+        String phoneNumber = (String) hashMap.get("phoneFirst") + "-" + (String) hashMap.get("phoneSecond")
+                + "-" + (String) hashMap.get("phoneThird");
+        String addressId = (String) hashMap.get("addressId");
+        String addressAddId = (String) hashMap.get("addressAddId");
 
         // 인서트문
-        String query = "INSERT INTO USER (NAME, USER_ID, PASSWORD, "+ 
-        " PHONE_NUMBER, USER_EMAIL, USER_EMAIL_PLATFORM, ADDRESS) " +
-        " VALUES('브라우니와플','WAPPLE','PASSWORDWAPPLE1','010-1234-5678', " + 
-        " 'WAP','NAVER.COM','강남구'); ";
+        String query = "INSERT INTO USER (NAME, USER_ID, PASSWORD, " +
+                " PHONE_NUMBER, USER_EMAIL, ADDRESS, ADDRESSADD) " +
+                " VALUES('" + userName + "','" + userId + "','" + userPassword + "','" + phoneNumber + "', " +
+                " '" + email + "','" + addressId + "','" + addressAddId + "'); ";
 
+        Commons commons = new Commons();
+        Statement statement2 = commons.getStatement();
+        try {
+            statement2.executeUpdate(query);
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
     }
 }
