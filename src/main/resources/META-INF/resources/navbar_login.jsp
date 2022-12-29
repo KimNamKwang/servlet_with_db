@@ -36,6 +36,7 @@
         </div>
         <a href="Login.html" class="nav-link">Login</a>
         <a href="/join/agreementServlet" class="nav-link">Join</a>
+        <a href="index.html" class="nav-link">마이페이지</a>
       </div>
     </div>
   </div>
