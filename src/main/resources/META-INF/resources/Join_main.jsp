@@ -45,17 +45,29 @@
 
         <div>
           <table class="table align-middle">
-            <form action="">
+            <form action="/join/completionServlet" onsubmit="return validateForm()" method="get">
               <tr>
                 <th>이름 *</th>
                 <td>
-                  <input type="text" class="form-control w-50" id="userName" />
+                  <input
+                    type="text"
+                    class="form-control w-50"
+                    name="userName"
+                    id="userName"
+                    required
+                  />
                 </td>
               </tr>
               <tr>
                 <th>아이디 *</th>
                 <td>
-                  <input type="text" class="form-control w-50" id="userId" />
+                  <input
+                    type="text"
+                    class="form-control w-50"
+                    name="userId"
+                    id="userId"
+                    required
+                  />
                 </td>
               </tr>
               <tr>
@@ -64,21 +76,34 @@
                   <input
                     type="text"
                     class="form-control w-50"
+                    name="userPassword"
                     id="userPassword"
+                    required
                   />
                 </td>
               </tr>
               <tr>
                 <th>비밀번호확인 *</th>
                 <td>
-                  <input type="text" class="form-control w-50" id="" />
+                  <input
+                    type="text"
+                    class="form-control w-50"
+                    id="userPasswordCheck"
+                    name="userPasswordCheck"
+                    required
+                  />
                 </td>
               </tr>
               <tr>
                 <th>이메일</th>
                 <td class="row d-flex align-items-center">
                   <div class="col">
-                    <input type="text" class="form-control" id="emailId" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="emailId"
+                      name="emailId"
+                    />
                   </div>
                   @
                   <div class="col">
@@ -86,10 +111,11 @@
                       type="text"
                       class="form-control"
                       id="emailPlatform"
+                      name="emailPlatform"
                     />
                   </div>
                   <div class="col-auto">
-                    <select class="form-select" name="" id="emailPlatform_s">
+                    <select class="form-select" name="emailPlatform_s" id="emailPlatform_s">
                       <option value="choice_email">직접입력</option>
                       <option value="@naver.com">naver.com</option>
                       <option value="@gmail.com">gmail.com</option>
@@ -102,7 +128,12 @@
                 <th>연락처 *</th>
                 <td class="row">
                   <div class="col-auto">
-                    <select class="form-select" name="" id="phoneFirst">
+                    <select
+                      class="form-select"
+                      name="phoneFirst"
+                      id="phoneFirst"
+                      required
+                    >
                       <option value="010">010</option>
                       <option value="011">011</option>
                       <option value="016">016</option>
@@ -113,11 +144,21 @@
                   </div>
                   <div class="col-auto">-</div>
                   <div class="col-auto">
-                    <input type="text" class="form-control" id="phoneSecond" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phoneSecond"
+                      name="phoneSecond"
+                    />
                   </div>
                   <div class="col-auto">-</div>
                   <div class="col-auto">
-                    <input type="text" class="form-control" id="phoneThird" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phoneThird"
+                      name="phoneThird"
+                    />
                   </div>
                 </td>
               </tr>
@@ -131,22 +172,24 @@
                         type="text"
                         class="col form-control"
                         id="addressAddId"
+                        name="addressAddId"
                       />
                     </div>
                     <div class="col-auto">[나머지주소입력]</div>
                   </div>
                 </td>
               </tr>
-            </form>
-          </table>
-        </div>
-        <div class="text-center">
-          <a
+            </table>
+          </div>
+          <div class="text-center">
+            <button
+            type="submit"
             class="btn btn-lg btn-outline-dark fw-bold w-25 m-4"
-            href="/join/completionServlet"
-          >
+            
+            >
             확인
-          </a>
+          </button>
+        </form>
         </div>
       </div>
     </main>
