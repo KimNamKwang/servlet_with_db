@@ -47,93 +47,99 @@
 
         <div>
           <table class="table align-middle">
-            <tr>
-              <th>이름 *</th>
-              <td>
-                <input type="text" class="form-control w-50" id="userName" />
-              </td>
-            </tr>
-            <tr>
-              <th>아이디 *</th>
-              <td>
-                <input type="text" class="form-control w-50" id="userId" />
-              </td>
-            </tr>
-            <tr>
-              <th>비밀번호 *</th>
-              <td>
-                <input
-                  type="text"
-                  class="form-control w-50"
-                  id="userPassword"
-                />
-              </td>
-            </tr>
-            <tr>
-              <th>비밀번호확인 *</th>
-              <td>
-                <input type="text" class="form-control w-50" id="" />
-              </td>
-            </tr>
-            <tr>
-              <th>이메일</th>
-              <td class="row d-flex align-items-center">
-                <div class="col">
-                  <input type="text" class="form-control" id="emailId" />
-                </div>
-                @
-                <div class="col">
-                  <input type="text" class="form-control" id="emailPlatform" />
-                </div>
-                <div class="col-auto">
-                  <select class="form-select" name="" id="emailPlatform_s">
-                    <option value="choice_email">직접입력</option>
-                    <option value="@naver.com">naver.com</option>
-                    <option value="@gmail.com">gmail.com</option>
-                    <option value="@daum.net">daum.net</option>
-                  </select>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>연락처 *</th>
-              <td class="row">
-                <div class="col-auto">
-                  <select class="form-select" name="" id="phoneFirst">
-                    <option value="010">010</option>
-                    <option value="011">011</option>
-                    <option value="016">016</option>
-                    <option value="017">017</option>
-                    <option value="018">018</option>
-                    <option value="019">019</option>
-                  </select>
-                </div>
-                <div class="col-auto">-</div>
-                <div class="col-auto">
-                  <input type="text" class="form-control" id="phoneSecond" />
-                </div>
-                <div class="col-auto">-</div>
-                <div class="col-auto">
-                  <input type="text" class="form-control" id="phoneThird" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>주소</th>
-              <td>
-                <input type="text" class="form-control" id="addressId" />
-                <div class="row d-flex flex-row align-items-center">
+            <form action="">
+              <tr>
+                <th>이름 *</th>
+                <td>
+                  <input type="text" class="form-control w-50" id="userName" />
+                </td>
+              </tr>
+              <tr>
+                <th>아이디 *</th>
+                <td>
+                  <input type="text" class="form-control w-50" id="userId" />
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호 *</th>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control w-50"
+                    id="userPassword"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호확인 *</th>
+                <td>
+                  <input type="text" class="form-control w-50" id="" />
+                </td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td class="row d-flex align-items-center">
+                  <div class="col">
+                    <input type="text" class="form-control" id="emailId" />
+                  </div>
+                  @
                   <div class="col">
                     <input
                       type="text"
-                      class="col form-control"
-                      id="addressAddId"
+                      class="form-control"
+                      id="emailPlatform"
                     />
                   </div>
-                  <div class="col-auto">[나머지주소입력]</div>
-                </div>
-              </td>
-            </tr>
+                  <div class="col-auto">
+                    <select class="form-select" name="" id="emailPlatform_s">
+                      <option value="choice_email">직접입력</option>
+                      <option value="@naver.com">naver.com</option>
+                      <option value="@gmail.com">gmail.com</option>
+                      <option value="@daum.net">daum.net</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>연락처 *</th>
+                <td class="row">
+                  <div class="col-auto">
+                    <select class="form-select" name="" id="phoneFirst">
+                      <option value="010">010</option>
+                      <option value="011">011</option>
+                      <option value="016">016</option>
+                      <option value="017">017</option>
+                      <option value="018">018</option>
+                      <option value="019">019</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">-</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" id="phoneSecond" />
+                  </div>
+                  <div class="col-auto">-</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" id="phoneThird" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <input type="text" class="form-control" id="addressId" />
+                  <div class="row d-flex flex-row align-items-center">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="col form-control"
+                        id="addressAddId"
+                      />
+                    </div>
+                    <div class="col-auto">[나머지주소입력]</div>
+                  </div>
+                </td>
+              </tr>
+            </form>
           </table>
         </div>
         <div class="text-center">

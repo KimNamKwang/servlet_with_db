@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +20,9 @@
     />
   </head>
   <body>
+    <%@ include file= "navbar_base.jsp" %> <%--
     <!-- ----------여기부터 main시작---------------- -->
+    --%>
     <main>
       <div class="container-fluid">
         <div class="card">
@@ -78,8 +81,9 @@
         </div>
       </div>
     </main>
+    <%--
     <!-- -------------------여기까지 main ------------------- -->
-
+    --%> <%@ include file= "footer.jsp" %>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

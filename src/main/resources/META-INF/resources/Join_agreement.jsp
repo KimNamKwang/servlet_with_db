@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,9 +20,11 @@
     />
   </head>
   <body>
+    <%--
     <!-- ----------여기부터 header------------ -->
-
+    --%> <%--
     <!-- ----------여기까지 header부분-------------- -->
+    --%>
     <main>
       <div class="container" style="margin-top: 50px; margin-bottom: 120px">
         <div
@@ -226,9 +229,11 @@
         </div>
       </div>
     </main>
+    <%--
     <!-- -----------여기서부터 footer입니다---------- -->
-
+    --%> <%--
     <!-- ------------------여기까지 footer ------------------ -->
+    --%>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
