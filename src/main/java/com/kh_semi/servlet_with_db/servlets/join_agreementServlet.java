@@ -13,13 +13,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = "/join/mainServlet")
-public class join_mainServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/join/agreementServlet")
+public class join_agreementServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Join_main.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Join_agreement.jsp");
         requestDispatcher.forward(request, response);
 
     }

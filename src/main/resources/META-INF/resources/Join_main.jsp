@@ -20,11 +20,9 @@
     />
   </head>
   <body>
-    <%--
-    <!-- ----------여기부터 header------------ -->
-    --&> <%--
-    <!-- ----------여기까지 header부분-------------- -->
-    --&>
+    <%@ include file= "navbar_base.jsp" %> <%--
+    <!-- ----------여기부터 main시작---------------- -->
+    --%>
     <main>
       <div class="container" style="margin-top: 50px; margin-bottom: 120px">
         <div
@@ -145,7 +143,7 @@
         <div class="text-center">
           <a
             class="btn btn-lg btn-outline-dark fw-bold w-25 m-4"
-            href="Join_completion.html"
+            href="/join/completionServlet"
           >
             확인
           </a>
@@ -153,10 +151,8 @@
       </div>
     </main>
     <%--
-    <!-- -----------여기서부터 footer입니다---------- -->
-    --%> <%--
-    <!-- ------------------여기까지 footer ------------------ -->
-    --&>
+    <!-- -------------------여기까지 main ------------------- -->
+    --%> <%@ include file= "footer.jsp" %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

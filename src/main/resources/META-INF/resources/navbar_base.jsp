@@ -35,7 +35,7 @@
           </div>
         </div>
         <a href="Login.html" class="nav-link">Login</a>
-        <a href="/join/mainServlet" class="nav-link">Join</a>
+        <a href="/join/agreementServlet" class="nav-link">Join</a>
       </div>
     </div>
   </div>
