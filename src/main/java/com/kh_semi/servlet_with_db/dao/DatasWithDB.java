@@ -95,9 +95,9 @@ public class DatasWithDB {
 
         // 인서트문
         String query = "INSERT INTO USER (NAME, USER_ID, PASSWORD, " +
-                " PHONE_NUMBER, USER_EMAIL, ADDRESS, ADDRESSADD) " +
+                " PHONE_NUMBER, USER_EMAIL, ADDRESS, ADDRESSADD, SURVEYED, JOIN_DATE ) " +
                 " VALUES('" + userName + "','" + userId + "','" + userPassword + "','" + phoneNumber + "', " +
-                " '" + email + "','" + addressId + "','" + addressAddId + "'); ";
+                " '" + email + "','" + addressId + "','" + addressAddId + "','',now()); ";
 
         Commons commons = new Commons();
         Statement statement2 = commons.getStatement();

@@ -86,10 +86,10 @@
                   >새 항목 추가</a
                 >
               </div>
-              <div class="mt-2">
+              <div class="mt-2" style="width: 100%">
                 <table class="table table-bordered">
                   <thead>
-                    <tr class="text-center">
+                    <tr class="text-center" col="4">
                       <th class="text-nowrap">문항내용</th>
                       <th class="text-nowrap">답항내용</th>
                       <th class="text-nowrap">수정/삭제</th>
@@ -103,11 +103,11 @@
                         답항5:매우불만족
                       </td>
                       <td>
-                        <div class="row">
+                        <div class="row me-2">
                           <div class="col-6">
                             <a
-                              href="#modalUpdate"
-                              data-bs-toggle="modal"
+                              href="#collapseTarget"
+                              data-bs-toggle="collapse"
                               class="btn btn-outline-dark btn-sm"
                             >
                               <i class="material-icons">edit</i>
@@ -116,6 +116,41 @@
                           <div class="col-6">
                             <button class="btn btn-outline-dark btn-sm">
                               <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
                             </button>
                           </div>
                         </div>
