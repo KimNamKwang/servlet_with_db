@@ -43,6 +43,7 @@ public class Admin_usersServlet extends HttpServlet {
             System.out.println(user.get("ADDRESS"));
             System.out.println(user.get("ADDRESSADD"));
         }
+        System.out.println();
         /* 이 부분 추가했을 유. request에 실어보내는게 없어서 */
         request.setAttribute("user_list", user_list);
         // getUsers

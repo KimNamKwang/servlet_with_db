@@ -32,108 +32,143 @@
         <table class="table align-middle">
           <form action="/Admin/surveysServlet" onsubmit="return validateForm()" method="get">
             <%
-              ArrayList<HashMap> serveyInfo_list = (ArrayList<HashMap>)request.getAttribute("serveyInfo_list");
-            %>
+            ArrayList<HashMap> serveyInfo_list = (ArrayList<HashMap>)request.getAttribute("serveyInfo_list");
+          %>
             <tr>
-              <th>설문조사명 *</th>
-              <td>
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  id=""
-                  value=""
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <th class="text-nowrap">설문내용</th>
-              <td>
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  id=""
-                  value=""
-                />
-              </td>
-            </tr>
-            <tr>
-              <th class="text-nowrap">설문기간 *</th>
-              <td>
-                시작일시
-                <input
-                  type="date"
-                  name=""
-                  id=""
-                  value="2022-12-29"
-                  min="2022-12-29"
-                />
-                ~ 마감일시
-                <input
-                  type="date"
-                  name=""
-                  id=""
-                  value="2022-12-29"
-                  min="2022-12-29"
-                />
-              </td>
-            </tr>
-            <tr>
-              <th
-                class="text-nowrap d-flex align-items-center"
-                style="border-bottom: none"
-              >
-                설문항목관리 *
-              </th>
-              <td>
-                <div class="text-end">
-                  <a
-                    href="#modalContent"
-                    data-bs-toggle="modal"
-                    class="btn btn-secondary btn-sm"
-                    >새 항목 추가</a
-                  >
-                </div>
-                <div class="mt-2">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr class="text-center">
-                        <th class="text-nowrap">문항내용</th>
-                        <th class="text-nowrap">답항내용</th>
-                        <th class="text-nowrap">수정/삭제</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1. 문항내용문항내용문항내용문항내용문항내용?</td>
-                        <td>
-                          답항1:매우만족, 답항2:만족, 답항3:보통, 답항4:불만족,
-                          답항5:매우불만족
-                        </td>
-                        <td>
-                          <div class="row">
-                            <div class="col-6">
-                              <a
-                                href="#modalUpdate"
-                                data-bs-toggle="modal"
-                                class="btn btn-outline-dark btn-sm"
-                              >
-                                <i class="material-icons">edit</i>
-                              </a>
-                            </div>
-                            <div class="col-6">
-                              <button class="btn btn-outline-dark btn-sm">
-                                <i class="material-icons">close</i>
-                              </button>
-                            </div>
+            <th>설문조사명 *</th>
+            <td>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id=""
+                value=""
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th class="text-nowrap">설문내용</th>
+            <td>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id=""
+                value=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <th class="text-nowrap">설문기간 *</th>
+            <td>
+              시작일시
+              <input
+                type="date"
+                name=""
+                id=""
+                value="2022-12-29"
+                min="2022-12-29"
+              />
+              ~ 마감일시
+              <input
+                type="date"
+                name=""
+                id=""
+                value="2022-12-29"
+                min="2022-12-29"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="text-nowrap d-flex align-items-center"
+              style="border-bottom: none"
+            >
+              설문항목관리 *
+            </th>
+            <td>
+              <div class="text-end">
+                <a
+                  href="#modalContent"
+                  data-bs-toggle="modal"
+                  class="btn btn-secondary btn-sm"
+                  >새 항목 추가</a
+                >
+              </div>
+              <div class="mt-2" style="width: 100%">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr class="text-center" col="4">
+                      <th class="text-nowrap">문항내용</th>
+                      <th class="text-nowrap">답항내용</th>
+                      <th class="text-nowrap">수정/삭제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. 문항내용문항내용문항내용문항내용문항내용?</td>
+                      <td>
+                        답항1:매우만족, 답항2:만족, 답항3:보통, 답항4:불만족,
+                        답항5:매우불만족
+                      </td>
+                      <td>
+                        <div class="row me-2">
+                          <div class="col-6">
+                            <a
+                              href="#collapseTarget"
+                              data-bs-toggle="collapse"
+                              class="btn btn-outline-dark btn-sm"
+                            >
+                              <i class="material-icons">edit</i>
+                            </a>
                           </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </td>
-            </tr>
+                          <div class="col-6">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
         </table>
       </div>
       <div class="text-end">

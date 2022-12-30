@@ -47,7 +47,8 @@
                   <% HashMap<String, Object> serveyInfo = serveyInfo_list.get(i); %>
                   <tr>
                   <td class="text-center"><%= i+1 %></td>
-                  <td><%= serveyInfo.get("SERVEY_NAME") %></td>
+                  <td>
+                    <%= serveyInfo.get("SERVEY_NAME") %></td>
                   <td><%= serveyInfo.get("SERVEY_COMMENT") %></td>
                   <td class="text-center">
                     <span class="text-nowrap"><%= serveyInfo.get("SERVEY_START_DATE") %></span>
@@ -56,12 +57,7 @@
                   <td class="text-nowrap"><%= serveyInfo.get("SERVEY_UP_DATE") %></td>
                   <td>
                     <div class="text-center">
-                      <button
-                        type="submit"
-                        class="btn btn-outline-dark btn-sm text-nowrap"
-                      >
-                        수정
-                      </button>
+                      <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailServlet?SERVEY_UID=<%= serveyInfo.get("SERVEY_UID") %>">수정</a>
                       <button
                         class="btn btn-outline-dark btn-sm text-nowrap"
                       >
