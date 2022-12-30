@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.HashMap" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,9 +21,18 @@
     />
   </head>
   <body>
-    <%@ include file= "navbar_base.jsp" %> <%--
-    <!-- ----------여기부터 main시작---------------- -->
-    --%>
+    <%
+      HashMap<String, Object> userDB = (HashMap<String, Object>) request.getAttribute("userDB");
+      
+      if(userDB != null){
+        
+    %>
+        <%@ include file= "navbar_login.jsp"  %>
+    <% } else { %>
+        <%@ include file= "navbar_base.jsp"  %>
+    <% } %>
+  
+    <!-- ----------여기부터 main시작------------------>
     <main>
       <div class="container-fluid">
         <div class="card">

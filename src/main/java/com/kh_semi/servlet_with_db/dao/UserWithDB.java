@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class UserWithDB {
     /* Question가져오는 Function */
-    public HashMap<String, Object> getUser(String USER_ID) throws SQLException {
+    public HashMap<String, Object> getUser(String USER_ID, String PASSWORD) throws SQLException {
 
         // DB로그인을 위해 인스턴스화
         Commons commons = new Commons();
@@ -17,26 +17,41 @@ public class UserWithDB {
         // parameter로 들어오는 name 로 대상을 찾는 쿼리
         String query = "SELECT * FROM USER WHERE USER_ID ='" + USER_ID + "';";
 
-        // String queryForAnswersList = "SELECT * FROM EXAMPLE_LIST WHERE EXAMPLE_UID IN
-        // (SELECT EXAMPLE_UID FROM ANSWERS WHERE QUESTIONS_UID = 'Q1')";
-
         ResultSet resultSet = statement.executeQuery(query);
         // ResultSet resultSetForAnswersList =
         // statement.executeQuery(queryForAnswersList);
 
         // DB에서 받아온 결과를 HashMap으로 받음.
-        HashMap<String, Object> result = null;
+        HashMap<String, Object> result = new HashMap<>();
 
-        while (resultSet.next()) {
-            result = new HashMap<>();
-            result.put("NAME", resultSet.getString("QUESTIONS_UID"));
-            result.put("USER_ID", resultSet.getString("USER_ID"));
-            result.put("PASSWORD", resultSet.getInt("PASSWORD"));
-            result.put("PHONE_NUMBER", resultSet.getInt("PHONE_NUMBER"));
-            result.put("USER_EMAIL", resultSet.getInt("USER_EMAIL"));
-            result.put("ADDRESS", resultSet.getInt("ADDRESS"));
-            result.put("ADDRESSADD", resultSet.getInt("ADDRESSADD"));
+        if (resultSet.isBeforeFirst()) {
+            while (resultSet.next()) {
+                if (USER_ID.equals(resultSet.getString("USER_ID"))
+                        && PASSWORD.equals(resultSet.getString("PASSWORD"))) {
+                    result.put("NAME", resultSet.getString("NAME"));
+                    result.put("USER_ID", resultSet.getString("USER_ID"));
+                    result.put("PASSWORD", resultSet.getString("PASSWORD"));
+                    result.put("PHONE_NUMBER", resultSet.getString("PHONE_NUMBER"));
+                    result.put("USER_EMAIL", resultSet.getString("USER_EMAIL"));
+                    result.put("ADDRESS", resultSet.getString("ADDRESS"));
+                    result.put("ADDRESSADD", resultSet.getString("ADDRESSADD"));
+
+                    // 임서 print
+                    System.out.println("resultSet이 나오는지 확인");
+                    System.out.println(resultSet.getString("NAME"));
+                    System.out.println(resultSet.getString("PASSWORD"));
+                } else {
+                    // 비밀번호가 틀림
+                    result = null;
+                }
+
+            }
+        } else {
+            // 입력 값이 틀림
+            result = null;
         }
+
         return result;
+
     }
 }
