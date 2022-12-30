@@ -31,9 +31,7 @@
       <div class="bg-light ps-4 pe-4 pb-1 mt-2 mb-2">
         <table class="table align-middle">
           <form action="/Admin/surveysServlet" onsubmit="return validateForm()" method="get">
-            <%
-            ArrayList<HashMap> serveyInfo_list = (ArrayList<HashMap>)request.getAttribute("serveyInfo_list");
-          %>
+            <% HashMap<String, Object> serveyInfo = (HashMap<String, Object>)request.getAttribute("serveyInfo"); %>
             <tr>
             <th>설문조사명 *</th>
             <td>
@@ -41,7 +39,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value=""
+                value="<%= serveyInfo.get("SERVEY_NAME") %>"
                 required
               />
             </td>
@@ -53,7 +51,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value=""
+                value="<%= serveyInfo.get("SERVEY_COMMENT") %>"
               />
             </td>
           </tr>
@@ -65,7 +63,7 @@
                 type="date"
                 name=""
                 id=""
-                value="2022-12-29"
+                value="<%= serveyInfo.get("SERVEY_START_DATE") %>"
                 min="2022-12-29"
               />
               ~ 마감일시
@@ -73,8 +71,8 @@
                 type="date"
                 name=""
                 id=""
-                value="2022-12-29"
-                min="2022-12-29"
+                value="<%= serveyInfo.get("SERVEY_END_DATE") %>"
+                min="<%= serveyInfo.get("SERVEY_START_DATE") %>"
               />
             </td>
           </tr>
