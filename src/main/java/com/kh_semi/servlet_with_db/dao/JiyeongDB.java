@@ -41,7 +41,7 @@ public class JiyeongDB {
     }
 
     // SERVEY_INFO 테이블 전체를 가져오는 function
-    public ArrayList<HashMap> getServeysInfo(String getServeyInfo) throws SQLException{
+    public ArrayList<HashMap> getServeysInfo(String serveyInfo_Uid) throws SQLException{
         
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
@@ -49,7 +49,7 @@ public class JiyeongDB {
         ResultSet resultSet = statement.executeQuery(query);
 
         ArrayList<HashMap> serveyInfo_list = new ArrayList<HashMap>();
-
+ 
         while(resultSet.next()) {
             HashMap<String, Object> serveyInfo = new HashMap<String, Object>();
             serveyInfo.put("SERVEY_UID", resultSet.getString("SERVEY_UID"));
@@ -64,4 +64,27 @@ public class JiyeongDB {
         return serveyInfo_list;
     }
 
-}
+    public HashMap<String, Object> getServeyInfoUid(String serveysUid) throws SQLException{
+        Commons commons = new Commons();
+        Statement statement = commons.getStatement();
+
+        String query = "SELECT * FROM SERVEY_INFO " +
+                        " WHERE SERVEY_UID = '" + serveysUid + "'";
+
+        ResultSet resultSet = statement.executeQuery(query);
+        HashMap<String, Object> result = null;
+        while(resultSet.next()){
+            result = new HashMap<>();
+                result.put("SERVEY_UID", resultSet.getString("SERVEY_UID"));
+                result.put("SERVEY_NAME", resultSet.getString("SERVEY_NAME"));
+                result.put("SERVEY_COMMENT", resultSet.getString("SERVEY_COMMENT"));
+                result.put("SERVEY_START_DATE", resultSet.getString("SERVEY_START_DATE"));
+                result.put("SERVEY_END_DATE", resultSet.getString("SERVEY_END_DATE"));
+            }
+            return result;
+        }
+
+        
+    }
+
+

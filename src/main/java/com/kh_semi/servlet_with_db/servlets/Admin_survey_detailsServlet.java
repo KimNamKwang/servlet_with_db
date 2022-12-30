@@ -20,22 +20,19 @@ public class Admin_survey_detailsServlet extends HttpServlet{
         String serveyInfo_Uid = request.getParameter("SERVEY_UID");
         
         JiyeongDB jiyeongDB = new JiyeongDB();
-        ArrayList<HashMap> serveyInfo_list = null;
+        
+        HashMap<String, Object> serveyInfo = null;
         try {
-            serveyInfo_list = jiyeongDB.getServeysInfo(serveyInfo_Uid);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        for(int i = 0; i < serveyInfo_list.size(); i++){
-            HashMap<String, Object> serveyInfo = serveyInfo_list.get(i);
+            serveyInfo = jiyeongDB.getServeyInfoUid(serveyInfo_Uid);
             System.out.println(serveyInfo.get("SERVEY_NAME"));
             System.out.println(serveyInfo.get("SERVEY_COMMENT"));
             System.out.println(serveyInfo.get("SERVEY_START_DATE"));
             System.out.println(serveyInfo.get("SERVEY_END_DATE"));
-            System.out.println(serveyInfo.get("SERVEY_UP_DATE"));
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        
-        request.setAttribute("serveyInfo_list", serveyInfo_list);
+
+       request.setAttribute("serveyInfo", serveyInfo);
 
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
@@ -43,4 +40,5 @@ public class Admin_survey_detailsServlet extends HttpServlet{
         requestDispatcher.forward(request, response);
 
     }
+
 }
