@@ -21,6 +21,7 @@
   </head>
   <body>
     <main>
+    <%@ include file= "navbar_base.jsp" %>
       <div class="container" style="margin-top: 120px; margin-bottom: 120px">
         <div class="text-center border mt-5 p-4">
           <div>

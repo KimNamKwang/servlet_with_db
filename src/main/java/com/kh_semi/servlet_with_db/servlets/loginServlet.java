@@ -26,6 +26,7 @@ public class loginServlet extends HttpServlet {
         // login.jsp 의 파라미터 값 받기
         String userId = request.getParameter("userId");
         String userPassword = request.getParameter("userPassword");
+        String logout = request.getParameter("logout");
 
         System.out.println(userId);
         System.out.println(userPassword);
@@ -37,15 +38,24 @@ public class loginServlet extends HttpServlet {
             // 경로 지정
             String path;
             if (userDB == null) {
-                // userDB의 입력 값이 없어서 NULL 이면 Login.jsp로 보내줌
-                PrintWriter writer = response.getWriter();
-                path = "/Login.jsp";
-                writer.println("<script>alert('로그인 정보가 일치하지 않습니다.'); location.href='" + path + "';</script>");
-                writer.close();
+
+                if ("yes".equals(logout)) {
+                    // 로그아웃
+                    path = "/index.jsp";
+                    HttpSession httpSession = request.getSession();
+                    httpSession.invalidate();
+                } else {
+                    // userDB의 입력 값이 없어서 NULL 이면 Login.jsp로 보내줌
+                    PrintWriter writer = response.getWriter();
+                    path = "/Login.jsp";
+                    writer.println("<script>alert('로그인 정보가 일치하지 않습니다.'); location.href='" + path + "';</script>");
+                    writer.close();
+                }
             } else {
                 // 정보가 들어있는 userDB면 index.jsp로 감
                 path = "/index.jsp";
-                request.setAttribute("userDB", userDB);
+                HttpSession httpSession = request.getSession();
+                httpSession.setAttribute("userDB", userDB);
             }
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(path);

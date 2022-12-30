@@ -22,7 +22,7 @@
   </head>
   <body>
     <%
-      HashMap<String, Object> userDB = (HashMap<String, Object>) request.getAttribute("userDB");
+      HashMap<String, Object> userDB = (HashMap<String, Object>) session.getAttribute("userDB");
       
       if(userDB != null){
         
