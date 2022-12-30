@@ -19,7 +19,6 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Admin_surveysServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        String userId = request.getParameter("USER_ID");
 
         /**
          * admin_surveys는 설문명과 설문내용이라는 데이터가 db에 없어서
