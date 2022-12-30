@@ -2,7 +2,7 @@
 <!-- ----------여기부터 header------------ -->
 <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-sm">
   <div class="container-fluid">
-    <a href="index_base.jsp" class="navbar-brand ms-5">
+    <a href="/index.jsp" class="navbar-brand ms-5">
       <div style="font-family: 'Zen Dots', cursive" class="text-white">
         Holy Fitness
       </div>
@@ -13,7 +13,7 @@
     ></a>
     <div class="navbar-nav">
       <div class="collapse navbar-collapse me-5" id="collapseID">
-        <a href="Login.jsp" class="nav-link">Login</a>
+        <a href="/Login.jsp" class="nav-link">Login</a>
         <a href="/join/agreementServlet" class="nav-link">Join</a>
       </div>
     </div>
