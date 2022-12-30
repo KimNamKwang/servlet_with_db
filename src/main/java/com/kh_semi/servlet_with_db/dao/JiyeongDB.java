@@ -82,9 +82,31 @@ public class JiyeongDB {
                 result.put("SERVEY_END_DATE", resultSet.getString("SERVEY_END_DATE"));
             }
             return result;
-        }
-
-        
     }
+
+    public ArrayList<HashMap> getQuestion_Answer(String serveysUid) throws SQLException{
+        
+        Commons commons = new Commons();
+        Statement statement = commons.getStatement();
+        String query = "SELECT QUESTION.QUESTION, ANSWER.ANSWER, ANSWER.ORDERS " +
+                        "FROM QUESTION_ANSWERS " +
+                        "INNER JOIN QUESTION ON QUESTION.QUESTION_ID = QUESTION_ANSWERS.QUESTION_ID " +
+                        "INNER JOIN ANSWER ON ANSWER.ANSWER_ID = QUESTION_ANSWERS.ANSWER_ID " +
+                        "WHERE SERVEY_UID = '" + serveysUid +"' ";
+        ResultSet resultSet = statement.executeQuery(query);
+        ArrayList<HashMap> question_answer_list = new ArrayList<HashMap>();
+        while(resultSet.next()){
+            HashMap<String, Object> question_answer = new HashMap<String, Object>();
+            question_answer.put("QUESTION", resultSet.getString("QUESTION"));
+            question_answer.put("ANSWER", resultSet.getString("ANSWER"));
+            question_answer.put("ORDERS", resultSet.getInt("ORDERS"));
+
+            question_answer_list.add(question_answer);
+        }
+        return question_answer_list;
+    }
+ 
+        
+}
 
 

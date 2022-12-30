@@ -21,6 +21,7 @@ public class Admin_surveysServlet extends HttpServlet {
 
         JiyeongDB jiyeongDB = new JiyeongDB();
         ArrayList<HashMap> serveyInfo_list = null;
+        ArrayList<HashMap> answer_list = null;
         try {
             serveyInfo_list = jiyeongDB.getServeysInfo(serveyInfo_Uid);
         } catch (SQLException e) {

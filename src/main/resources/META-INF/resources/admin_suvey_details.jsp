@@ -102,11 +102,20 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <% 
+                      ArrayList<HashMap> question_answer_list = (ArrayList<HashMap>)request.getAttribute("question_answer_list"); 
+                    %>
+                    <% 
+                        for(int i = 0; i < question_answer_list.size(); i++) { 
+                          HashMap<String, Object> question_answer = question_answer_list.get(i);
+                        %>
                     <tr>
-                      <td>1. 문항내용문항내용문항내용문항내용문항내용?</td>
+                      <td><%= question_answer.get("QUESTION") %></td>
                       <td>
-                        답항1:매우만족, 답항2:만족, 답항3:보통, 답항4:불만족,
-                        답항5:매우불만족
+                        
+                        답항<%= question_answer.get("ORDERS") %>:
+                        <%= question_answer.get("ANSWER") %>
+                    
                       </td>
                       <td>
                         <div class="row me-2">
@@ -127,6 +136,7 @@
                         </div>
                       </td>
                     </tr>
+                    <% } %>
                     <tr>
                       <td>
                         <div class="collapse" id="collapseTarget">
