@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,43 +39,51 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-center">1</td>
-                <td>홀리 피트니스 만족도 설문 조사</td>
-                <td>피트니스의 전반적인 부분에 대한 만족도 조사</td>
-                <td class="text-center">
-                  <span class="text-nowrap">2022-12-01</span>
-                  <span class="text-nowrap">~ 2022-12-31</span>
-                </td>
-                <td class="text-nowrap">2022-12-01</td>
-                <td>
-                  <div class="text-center">
-                    <button
-                      class="btn btn-outline-dark btn-sm text-nowrap"
-                      onclick="location.href='./admin_suvey.html'"
-                    >
-                      수정
-                    </button>
-                    <button
-                      class="btn btn-outline-dark btn-sm text-nowrap"
-                      onclick="location.href='./admin_suvey.html'"
-                    >
-                      삭제
-                    </button>
-                  </div>
-                </td>
-              </tr>
+              <form action="/Admin/surveyDetailServlet" method="get">
+                <%
+                ArrayList<HashMap> serveyInfo_list = (ArrayList<HashMap>)request.getAttribute("serveyInfo_list");
+                %>
+                <% for(int i = 0; i < serveyInfo_list.size(); i++){ %>
+                  <% HashMap<String, Object> serveyInfo = serveyInfo_list.get(i); %>
+                  <tr>
+                  <td class="text-center"><%= i+1 %></td>
+                  <td><%= serveyInfo.get("SERVEY_NAME") %></td>
+                  <td><%= serveyInfo.get("SERVEY_COMMENT") %></td>
+                  <td class="text-center">
+                    <span class="text-nowrap"><%= serveyInfo.get("SERVEY_START_DATE") %></span>
+                    <span class="text-nowrap">~ <%= serveyInfo.get("SERVEY_END_DATE") %></span>
+                  </td>
+                  <td class="text-nowrap"><%= serveyInfo.get("SERVEY_UP_DATE") %></td>
+                  <td>
+                    <div class="text-center">
+                      <button
+                        type="submit"
+                        class="btn btn-outline-dark btn-sm text-nowrap"
+                      >
+                        수정
+                      </button>
+                      <button
+                        class="btn btn-outline-dark btn-sm text-nowrap"
+                      >
+                        삭제
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <% } %>
+              
             </tbody>
           </table>
         </div>
 
         <div class="text-end">
           <button
+            type="submit"
             class="btn btn-secondary btn-sm text-nowrap"
-            onclick="location.href='./admin_suvey.html'"
           >
             등록
           </button>
+        </form>
         </div>
       </div>
     </main>
