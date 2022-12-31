@@ -13,8 +13,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// @WebFilter("/survey/*")
-public class SurveysFilter implements Filter {
+// @WebFilter("/myPage/*")
+public class FilterForMypages implements Filter {
 
     @Override
     public void destroy() {

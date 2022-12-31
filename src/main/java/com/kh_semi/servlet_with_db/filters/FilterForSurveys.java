@@ -12,9 +12,10 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
-// @WebFilter("/myPage/*")
-public class MypagesFilter implements Filter {
+// @WebFilter("/survey/*")
+public class FilterForSurveys implements Filter {
 
     @Override
     public void destroy() {
@@ -30,11 +31,16 @@ public class MypagesFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 
+        /* 세션을 체크하기 위해 세션 추가 */
+        HttpSession httpSession = httpServletRequest.getSession();
+
+        httpSession.getAttribute("userId");
+
         String uri = httpServletRequest.getRequestURI();
 
         if (uri.endsWith("Servlets")) {
             /* index.html로 보내줬다가 */
-            httpServletResponse.sendRedirect("index.html");
+            httpServletResponse.sendRedirect("index.jsp");
         } else {
             /* chain이 url 서블릿으로 넘겨주는 역할. 곧 Dispatcher */
             chain.doFilter(request, response);
