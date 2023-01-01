@@ -22,8 +22,8 @@ public class SurveyServlet extends HttpServlet {
         
         String question_id = request.getParameter("QUESTION_ID");
 
-
         SurveyWithDB surveyWithDB = new SurveyWithDB();
+
         HashMap<String, Object> question = null;
         ArrayList<HashMap> answer_list = null;
         
@@ -37,8 +37,12 @@ public class SurveyServlet extends HttpServlet {
             e.printStackTrace();
         }
         
+        HashMap<String, Object> answer= new HashMap<String, Object>();
         for(int i = 0; i < answer_list.size(); i++) {
-            HashMap<String, Object> answer =  answer_list.get(i);
+            
+            answer =  answer_list.get(i);
+
+            System.out.println(answer.get("QUESTION"));
             System.out.println(answer.get("ANSWER"));
             System.out.println(answer.get("ORDERS"));
         }
@@ -48,7 +52,7 @@ public class SurveyServlet extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
         
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey copy.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey.jsp");
         requestDispatcher.forward(request, response);
 
     }

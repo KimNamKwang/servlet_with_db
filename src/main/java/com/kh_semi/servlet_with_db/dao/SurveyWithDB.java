@@ -9,24 +9,24 @@ import java.util.HashMap;
 
 public class SurveyWithDB {
 
-    public HashMap<String, Object>getQuestion(String question_id) throws SQLException {
+    public HashMap<String, Object> getQuestion(String question_id) throws SQLException {
 
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
 
-        String query = "SELECT * FROM QUESTION" +
+        String query = "SELECT * FROM QUESTION " +
                 " WHERE QUESTION_ID = '" + question_id + "'";
 
         ResultSet resultSet = statement.executeQuery(query);
-        HashMap<String, Object> result = null;
+        
+        HashMap<String, Object> result = new HashMap<String, Object>();
         while (resultSet.next()) {
-            result = new HashMap<>();
+              
                 result.put("QUESTION", resultSet.getString("QUESTION"));
                 result.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
                 result.put("ORDERS", resultSet.getInt("ORDERS"));
-            }
-
-        return result;
+         }
+         return result;
     }
 
   
@@ -37,7 +37,7 @@ public class SurveyWithDB {
         String query = "SELECT ANSWER_LIST.QUESTION_ID, ANSWER.ORDERS, ANSWER.ANSWER" +
                         "FROM ANSWER_LIST" +
                         "INNER JOIN ANSWER" +
-                        "ON ANSWER_LIST.ANSWER_ID = ANSWER.ANSWER_ID " +
+                        "ON ANSWER_LIST = ANSWER.ANSWER_ID " +
                         "WHERE QUESTION_ID = '"+servey_id+"' "+
                          "ORDER BY QUESTION_ID";
         ResultSet resultSet = statement.executeQuery(query);
@@ -45,9 +45,9 @@ public class SurveyWithDB {
         ArrayList<HashMap> answer_list = new ArrayList<HashMap>();
         while(resultSet.next()){
             HashMap<String, Object> answer = new HashMap<String, Object>();
-            answer.put("ANSWER_ID", resultSet.getString("ANSWER_ID"));
-            answer.put("ANSWER", resultSet.getString("ANSWER"));
+            answer.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
             answer.put("ORDERS", resultSet.getInt("ORDERS"));
+            answer.put("ANSWER", resultSet.getString("ANSWER"));
 
             answer_list.add(answer);
         }

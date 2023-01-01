@@ -10,15 +10,17 @@ import java.util.Date;
 public class Commons {
     public Statement getStatement() {
         String url = "jdbc:mysql://localhost:3306/health_club";
-        String user = "root";
+        String user = "root";        
         String password = "*khacademy!";
 
         Statement statement = null;
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
+            System.out.println("연결!");
         } catch (SQLException e) {
             e.printStackTrace();
+            
         }
         return statement;
     }
