@@ -16,7 +16,18 @@ public class UserWithDB {
 
         // parameter로 들어오는 name 로 대상을 찾는 쿼리
         String query = "SELECT * FROM USER WHERE USER_ID ='" + USER_ID + "';";
+        String email = "hong@naver.com";
+        String first = email.substring(0, email.indexOf('@'));
+        String second = email.substring(email.indexOf('@') + 1, email.length());
 
+        String number = "010-5041-3846";
+        String first_num = number.substring(0, number.indexOf('-'));
+        String second_num = number.substring(4, number.indexOf('-', 4));
+        String third_num = number.substring(9, number.length());
+
+        System.out.println(first + " " + second);
+
+        System.out.println(first_num + " " + second_num + " " + third_num);
         ResultSet resultSet = statement.executeQuery(query);
         // ResultSet resultSetForAnswersList =
         // statement.executeQuery(queryForAnswersList);

@@ -42,6 +42,8 @@ public class Admin_usersServlet extends HttpServlet {
             System.out.println(user.get("USER_EMAIL"));
             System.out.println(user.get("ADDRESS"));
             System.out.println(user.get("ADDRESSADD"));
+            System.out.println(user.get("SURVEYED"));
+            System.out.println(user.get("JOIN_DATE"));
         }
         System.out.println();
         /* 이 부분 추가했을 유. request에 실어보내는게 없어서 */

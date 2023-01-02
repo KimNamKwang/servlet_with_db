@@ -50,8 +50,8 @@ import = "java.util.HashMap, java.util.ArrayList "%>
                     ><%=  user.get("NAME")  %></a>
                   </td>
                   <td><%=  user.get("USER_ID")  %></td>
-                  <td>2022-12-28 12:00:00</td>
-                  <td>O</td>
+                  <td><%=  user.get("JOIN_DATE")  %></td>
+                  <td><%=  user.get("SURVEYED")  %></td>
                   <td>
                     <a
                     href="#modalUpdate"
