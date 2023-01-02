@@ -88,9 +88,9 @@
 
 -[UserWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/UserWithDB.java)
 
-<img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
-
 <hr>
+
+<img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
 ## 🙋‍♀️안지영
 
