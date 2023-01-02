@@ -19,13 +19,13 @@ public class AdminUserDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String userId = request.getParameter("USER_ID");
-        AdminWithDB jiyeongDB = new AdminWithDB();
+        AdminWithDB adminWithDB = new AdminWithDB();
 
         HashMap<String, Object> userInfo = null;
         ArrayList<HashMap> userInfo_details_list = null;
         try {
-            userInfo_details_list = jiyeongDB.getUsers(userId);
-            userInfo = jiyeongDB.getUserId(userId);
+            userInfo_details_list = adminWithDB.getUsers(userId);
+            userInfo = adminWithDB.getUserId(userId);
         } catch (SQLException e1) {
             e1.printStackTrace();
         }

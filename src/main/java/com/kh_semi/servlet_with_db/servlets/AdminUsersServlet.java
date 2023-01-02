@@ -20,10 +20,10 @@ public class AdminUsersServlet extends HttpServlet {
             throws IOException, ServletException {
         String userId = request.getParameter("USER_ID");
 
-        AdminWithDB jiyeongDB = new AdminWithDB();
+        AdminWithDB adminWithDB = new AdminWithDB();
         ArrayList<HashMap> user_list = null;
         try {
-            user_list = jiyeongDB.getUsers(userId);
+            user_list = adminWithDB.getUsers(userId);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

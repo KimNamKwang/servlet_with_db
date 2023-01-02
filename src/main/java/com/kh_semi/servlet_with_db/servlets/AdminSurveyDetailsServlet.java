@@ -2,7 +2,6 @@ package com.kh_semi.servlet_with_db.servlets;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.kh_semi.servlet_with_db.dao.AdminWithDB;
@@ -19,12 +18,12 @@ public class AdminSurveyDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         String surveyInfo_Uid = request.getParameter("SURVEY_UID");
-        AdminWithDB jiyeongDB = new AdminWithDB();
+        AdminWithDB adminWithDB = new AdminWithDB();
 
         HashMap<String, Object> surveyInfo = null;
 
         try {
-            surveyInfo = jiyeongDB.getSurveyInfoUid(surveyInfo_Uid);
+            surveyInfo = adminWithDB.getSurveyInfoUid(surveyInfo_Uid);
             System.out.println(surveyInfo.get("SURVEY_NAME"));
             System.out.println(surveyInfo.get("SURVEY_COMMENT"));
             System.out.println(surveyInfo.get("SURVEY_START_DATE"));

@@ -20,11 +20,11 @@ public class AdminSurveysServlet extends HttpServlet {
             throws IOException, ServletException {
         String surveyInfo_Uid = request.getParameter("SURVEY_UID");
 
-        AdminWithDB jiyeongDB = new AdminWithDB();
+        AdminWithDB adminWithDB = new AdminWithDB();
         ArrayList<HashMap> surveyInfo_list = null;
         ArrayList<HashMap> answer_list = null;
         try {
-            surveyInfo_list = jiyeongDB.getSurveysInfo(surveyInfo_Uid);
+            surveyInfo_list = adminWithDB.getSurveysInfo(surveyInfo_Uid);
         } catch (SQLException e) {
             e.printStackTrace();
         }

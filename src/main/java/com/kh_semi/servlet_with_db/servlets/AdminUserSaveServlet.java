@@ -4,19 +4,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
-
-import org.springframework.cglib.proxy.Dispatcher;
 
 import com.kh_semi.servlet_with_db.dao.Commons;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = "/Admin/userSavaServlet")
 public class AdminUserSaveServlet extends HttpServlet {
