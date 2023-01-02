@@ -42,7 +42,7 @@ public class AdminWithDB {
 
     }
 
-    // Survey_INFO 테이블 전체를 가져오는 function
+    // Survey_INFO 전체
     public ArrayList<HashMap> getSurveysInfo(String surveyInfo_Uid) throws SQLException {
 
         Commons commons = new Commons();
@@ -66,7 +66,7 @@ public class AdminWithDB {
         return surveyInfo_list;
     }
 
-    /* surveyUid를 parameter로 값을 받아오는 Function */
+    // surveyUid를 parameter로 값을 받아오는 Function
     public HashMap<String, Object> getSurveyInfoUid(String surveyUid) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
@@ -88,6 +88,7 @@ public class AdminWithDB {
         return result;
     }
 
+    // parabeter로 들어온 surveysUid에 해당하는 문항과 답항
     public ArrayList<HashMap> getQuestionAnswer(String surveysUid) throws SQLException {
 
         Commons commons = new Commons();
@@ -110,7 +111,7 @@ public class AdminWithDB {
         return question_answer_list;
     }
 
-    // 파라미터로 받은 userId에 해당하는 row 데이터
+    // parabeter로 받은 userId에 해당하는 row 데이터
     public HashMap<String, Object> getUserId(String userId) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();

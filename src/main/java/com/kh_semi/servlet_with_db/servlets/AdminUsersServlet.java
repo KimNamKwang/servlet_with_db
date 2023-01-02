@@ -40,10 +40,10 @@ public class AdminUsersServlet extends HttpServlet {
             System.out.println(user.get("JOIN_DATE"));
         }
         System.out.println();
-        /* 이 부분 추가했을 유. request에 실어보내는게 없어서 */
+        
         request.setAttribute("user_list", user_list);
-        // getUsers
-        response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
+        
+        response.setContentType("text/html;charset=UTF-8"); // 한글 깨짐 방지
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_users.jsp");
         requestDispatcher.forward(request, response);

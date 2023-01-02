@@ -37,12 +37,14 @@ public class AdminUserDetailsServlet extends HttpServlet {
         System.out.println(userInfo.get("ADDRESS"));
         System.out.println(userInfo.get("ADDRESSADD"));
 
+        // DB email을 '@'를 기준으로 나눠서 변수에 담음
         String userEmail = (String) userInfo.get("USER_EMAIL");
         String userEmail1 = userEmail.substring(0, userEmail.indexOf('@'));
         String userEmail2 = userEmail.substring(userEmail.indexOf('@') + 1, userEmail.length());
         System.out.println(userEmail1);
         System.out.println(userEmail2);
 
+        // DB phonNumber를 '-'를 기준으로 나눠서 변수에 담음
         String phone_number = (String) userInfo.get("PHONE_NUMBER");
         String phoneFirst = phone_number.substring(0, phone_number.indexOf('-'));
         String phoneSecond = phone_number.substring(4, phone_number.indexOf('-', 4));
@@ -51,14 +53,11 @@ public class AdminUserDetailsServlet extends HttpServlet {
         System.out.println(phoneSecond);
         System.out.println(phoneThird);
 
-
-
-
        
 
         request.setAttribute("userInfo", userInfo);
 
-        response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
+        response.setContentType("text/html;charset=UTF-8"); // 한글 깨짐 방지
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_user_details.jsp");
         requestDispatcher.forward(request, response);

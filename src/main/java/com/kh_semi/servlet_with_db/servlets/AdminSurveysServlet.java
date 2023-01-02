@@ -39,7 +39,7 @@ public class AdminSurveysServlet extends HttpServlet {
         }
 
         request.setAttribute("surveyInfo_list", surveyInfo_list);
-        response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
+        response.setContentType("text/html;charset=UTF-8"); // 한글 깨짐 방지
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_surveys.jsp");
         requestDispatcher.forward(request, response);
