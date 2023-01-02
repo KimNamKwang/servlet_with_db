@@ -30,8 +30,6 @@
 
 ## 🙋‍♂️김남광
 
-
-
 ### 구현기능
 
 #### 회원가입
@@ -56,10 +54,9 @@
 
 -[DatasWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/DatasWithDB.java)
 
+<img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
 ## 🙋‍♂️김석진
-
-<img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
 ### 구현기능
 
@@ -89,10 +86,9 @@
 
 -[UserWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/UserWithDB.java)
 
+<img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
 ## 🙋‍♀️안지영
-
-<img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
 ### 구현기능
 
@@ -126,9 +122,9 @@
 
 
 
+<img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
 ## 🙋‍♂️이재현
 
-<img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
 ### 구현기능
