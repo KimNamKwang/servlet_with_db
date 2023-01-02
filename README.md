@@ -26,9 +26,11 @@
 
 # 팀구성
 
+<img src="https://avatars.githubusercontent.com/u/111833622?v=4" width="80">
+
 ## 🙋‍♂️김남광
 
-<img src="https://avatars.githubusercontent.com/u/111833622?v=4" width="80">
+
 
 ### 구현기능
 
