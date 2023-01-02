@@ -91,8 +91,7 @@
             <td>
               <div class="text-end">
                 <a
-                  href="#modalContent"
-                  data-bs-toggle="modal"
+                  href=""
                   class="btn btn-secondary btn-sm"
                   >새 항목 추가</a
                 >

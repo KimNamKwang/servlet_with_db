@@ -55,8 +55,8 @@
                       type="text"
                       class="form-control w-50"
                       name="userId"
-                      disabled
-                      placeholder="<%= userInfo.get("USER_ID") %>"
+                      value="<%= userInfo.get("USER_ID") %>"
+                      readonly
                     />
                   </td>
                 </tr>
