@@ -24,17 +24,17 @@
 
 <img src="https://img.shields.io/badge/My%20SQL%20Workbench-188038?style=flat&logo=MySQL&logoColor=white" />
 
-## 팀구성
+# 팀구성
 
-### 김남광
+## 🙋‍♂️김남광
 
 <img src="https://avatars.githubusercontent.com/u/111833622?v=4" width="80">
 
-#### 구현기능
+### 구현기능
 
-##### 회원가입
+#### 회원가입
 
-##### JSP
+#### JSP
 
 -[join_main.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Join_main.jsp)
 
@@ -42,7 +42,7 @@
 
 -[Join_agreement.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Join_agreement.jsp)
 
-##### Servlet
+#### Servlet
 
 -[join_mainservlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/join_mainservlet.java)
 
@@ -50,20 +50,20 @@
 
 -[join_agreementServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/join_agreementServlet.java)
 
-##### DB
+#### DB
 
 -[DatasWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/DatasWithDB.java)
 
 
-### 김석진
+## 🙋김석진
 
 <img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
-#### 구현기능
+### 구현기능
 
-##### 메인페이지, 로그인, 마이페이지
+#### 메인페이지, 로그인, 마이페이지
 
-##### JSP
+#### JSP
 
 -[navbar_base.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/navbar_base.jsp)
 
@@ -75,7 +75,7 @@
 
 -[footer.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/footer.jsp)
 
-##### Servlet
+#### Servlet
 
 -[index_servlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/index_servlet.java)
 
@@ -83,20 +83,20 @@
 
 -[MyPageServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/MyPageServlet.java)
 
-##### DB
+#### DB
 
 -[UserWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/UserWithDB.java)
 
 
-### 안지영
+## 🙋‍♀️안지영
 
 <img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
-#### 구현기능
+### 구현기능
 
-##### 관리자 페이지(회원 관리, 설문 관리)
+#### 관리자 페이지(회원 관리, 설문 관리)
 
-##### JSP
+#### JSP
 
 -[admin_users.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_users.jsp)
 
@@ -106,7 +106,7 @@
 
 -[admin_survey_details.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_survey_details.jsp)
 
-##### Servlet
+#### Servlet
 
 -[AdminUsersServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/Admin_usersServlet.java)
 
@@ -118,15 +118,15 @@
 
 -[AdminSurveyDetailsServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminSurveyDetailsServlet.java)
 
-##### DB
+#### DB
 
 -[AdminWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/AdminWithDB.java)
 
 
 
 
-### 이재현
+## 🙋‍♂️이재현
 
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
-#### 구현기능
+### 구현기능
