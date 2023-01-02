@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.kh_semi.servlet_with_db.dao.JiyeongDB;
-import com.kh_semi.servlet_with_db.dao.PollWithDB;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -16,11 +15,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/Admin/usersServlet")
-/**
- * modal창에는 for문이 적용이 안 됩니다...
- * 강사님께 물어보고 적용방 법이 있는지 알아봐야 할 둣
- * 
- */
 public class Admin_usersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
