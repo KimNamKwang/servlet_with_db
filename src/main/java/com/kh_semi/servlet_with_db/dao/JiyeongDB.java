@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class JiyeongDB { 
+public class JiyeongDB {
     /**
      * User테이블의 모든것을 가져오는 Function
      * 
@@ -32,6 +32,8 @@ public class JiyeongDB {
             user.put("USER_EMAIL", resultSet.getString("USER_EMAIL"));
             user.put("ADDRESS", resultSet.getString("ADDRESS"));
             user.put("ADDRESSADD", resultSet.getString("ADDRESSADD"));
+            user.put("SURVEYED", resultSet.getString("SURVEYED"));
+            user.put("JOIN_DATE", resultSet.getString("JOIN_DATE"));
 
             user_list.add(user);
 
@@ -41,16 +43,16 @@ public class JiyeongDB {
     }
 
     // SERVEY_INFO 테이블 전체를 가져오는 function
-    public ArrayList<HashMap> getServeysInfo(String serveyInfo_Uid) throws SQLException{
-        
+    public ArrayList<HashMap> getServeysInfo(String serveyInfo_Uid) throws SQLException {
+
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
         String query = "SELECT * FROM SERVEY_INFO ";
         ResultSet resultSet = statement.executeQuery(query);
 
         ArrayList<HashMap> serveyInfo_list = new ArrayList<HashMap>();
- 
-        while(resultSet.next()) {
+
+        while (resultSet.next()) {
             HashMap<String, Object> serveyInfo = new HashMap<String, Object>();
             serveyInfo.put("SERVEY_UID", resultSet.getString("SERVEY_UID"));
             serveyInfo.put("SERVEY_NAME", resultSet.getString("SERVEY_NAME"));
@@ -58,44 +60,44 @@ public class JiyeongDB {
             serveyInfo.put("SERVEY_START_DATE", resultSet.getString("SERVEY_START_DATE"));
             serveyInfo.put("SERVEY_END_DATE", resultSet.getString("SERVEY_END_DATE"));
             serveyInfo.put("SERVEY_UP_DATE", resultSet.getString("SERVEY_UP_DATE"));
-       
+
             serveyInfo_list.add(serveyInfo);
         }
         return serveyInfo_list;
     }
 
-    public HashMap<String, Object> getServeyInfoUid(String serveysUid) throws SQLException{
+    public HashMap<String, Object> getServeyInfoUid(String serveysUid) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
 
         String query = "SELECT * FROM SERVEY_INFO " +
-                        " WHERE SERVEY_UID = '" + serveysUid + "'";
+                " WHERE SERVEY_UID = '" + serveysUid + "'";
 
         ResultSet resultSet = statement.executeQuery(query);
         HashMap<String, Object> result = null;
-        while(resultSet.next()){
+        while (resultSet.next()) {
             result = new HashMap<>();
-                result.put("SERVEY_UID", resultSet.getString("SERVEY_UID"));
-                result.put("SERVEY_NAME", resultSet.getString("SERVEY_NAME"));
-                result.put("SERVEY_COMMENT", resultSet.getString("SERVEY_COMMENT"));
-                result.put("SERVEY_START_DATE", resultSet.getString("SERVEY_START_DATE"));
-                result.put("SERVEY_END_DATE", resultSet.getString("SERVEY_END_DATE"));
-            }
-            return result;
+            result.put("SERVEY_UID", resultSet.getString("SERVEY_UID"));
+            result.put("SERVEY_NAME", resultSet.getString("SERVEY_NAME"));
+            result.put("SERVEY_COMMENT", resultSet.getString("SERVEY_COMMENT"));
+            result.put("SERVEY_START_DATE", resultSet.getString("SERVEY_START_DATE"));
+            result.put("SERVEY_END_DATE", resultSet.getString("SERVEY_END_DATE"));
+        }
+        return result;
     }
 
-    public ArrayList<HashMap> getQuestion_Answer(String serveysUid) throws SQLException{
-        
+    public ArrayList<HashMap> getQuestion_Answer(String serveysUid) throws SQLException {
+
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
         String query = "SELECT QUESTION.QUESTION, ANSWER.ANSWER, ANSWER.ORDERS " +
-                        "FROM QUESTION_ANSWERS " +
-                        "INNER JOIN QUESTION ON QUESTION.QUESTION_ID = QUESTION_ANSWERS.QUESTION_ID " +
-                        "INNER JOIN ANSWER ON ANSWER.ANSWER_ID = QUESTION_ANSWERS.ANSWER_ID " +
-                        "WHERE SERVEY_UID = '" + serveysUid +"' ";
+                "FROM QUESTION_ANSWERS " +
+                "INNER JOIN QUESTION ON QUESTION.QUESTION_ID = QUESTION_ANSWERS.QUESTION_ID " +
+                "INNER JOIN ANSWER ON ANSWER.ANSWER_ID = QUESTION_ANSWERS.ANSWER_ID " +
+                "WHERE SERVEY_UID = '" + serveysUid + "' ";
         ResultSet resultSet = statement.executeQuery(query);
         ArrayList<HashMap> question_answer_list = new ArrayList<HashMap>();
-        while(resultSet.next()){
+        while (resultSet.next()) {
             HashMap<String, Object> question_answer = new HashMap<String, Object>();
             question_answer.put("QUESTION", resultSet.getString("QUESTION"));
             question_answer.put("ANSWER", resultSet.getString("ANSWER"));
@@ -105,8 +107,5 @@ public class JiyeongDB {
         }
         return question_answer_list;
     }
- 
-        
+
 }
-
-
