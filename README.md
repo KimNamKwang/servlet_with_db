@@ -55,7 +55,7 @@
 -[DatasWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/DatasWithDB.java)
 
 
-## 🙋김석진
+## 🙋‍♂️김석진
 
 <img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
