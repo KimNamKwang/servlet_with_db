@@ -52,7 +52,7 @@ public class MyPageServlet extends HttpServlet {
             httpSession.invalidate();
             PrintWriter writer = response.getWriter();
             String path = "/Login.jsp";
-            writer.println("<script>alert('수정이 완료되었습니다.<br> 다시 로그인해주세요.'); location.href='" + path + "';</script>");
+            writer.println("<script>alert('수정이 완료되었습니다. 다시 로그인해주세요.'); location.href='" + path + "';</script>");
             writer.close();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -42,7 +42,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value="<%= surveyInfo.get("SURVEY_NAME") %>"
+                value="홀리 피트니스 만족도 설문 조사"
                 required
               />
             </td>
@@ -54,7 +54,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value="<%= surveyInfo.get("SURVEY_COMMENT") %>"
+                value="피트니스의 전반적인 부분에 대한 만족도 조사"
               />
             </td>
            
@@ -67,7 +67,7 @@
                 type="date"
                 name=""
                 id=""
-                value="<%= surveyInfo.get("SURVEY_START_DATE") %>"
+                value="2022-12-01"
                 min="2022-12-29"
               />
               ~ 마감일시
@@ -75,8 +75,8 @@
                 type="date"
                 name=""
                 id=""
-                value="<%= surveyInfo.get("SURVEY_END_DATE") %>"
-                min="<%= surveyInfo.get("SURVEY_START_DATE") %>"
+                value="2022-12-31"
+                min="2022-12-01"
               />
             </td>
           </tr>
@@ -108,11 +108,13 @@
                   <tbody>
                     
                     <tr>
-                      <td></td>
+                      <td>1. 상담시 친절하게 안내 받으시고 궁금한 사항에 대한 답변이 만족스러우셨습니까?</td>
                       <td>
-                        
-                        답항
-                    
+                        (1)매우만족
+                        (2)만족
+                        (3)보통
+                        (4)불만
+                        (5)매우불만
                       </td>
                       <td>
                         <div class="row me-2">
@@ -149,6 +151,262 @@
                       </td>
                       <td colspan="6">
                         <div class="row collapse" id="collapseTarget">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. PT(1:1 퍼스널 트레이닝) 진행시 친절하게 안내 받으시고 궁금한 사항에 대한 답변이 만족스러우셨습니까?</td>
+                      <td>
+                        (1)매우만족
+                        (2)만족
+                        (3)보통
+                        (4)불만
+                        (5)매우불만
+                      </td>
+                      <td>
+                        <div class="row me-2">
+                          <div class="col-6">
+                            <a
+                              href="#collapseTarget2"
+                              data-bs-toggle="collapse"
+                              class="btn btn-outline-dark btn-sm"
+                            >
+                              <i class="material-icons">edit</i>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                   
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget2">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget2">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. OT(1:1 무료 PT) 진행시 친절하게 안내 받으시고 궁금한 사항에 대한 답변이 만족스러우셨습니까?</td>
+                      <td>
+                        (1)매우만족
+                        (2)만족
+                        (3)보통
+                        (4)불만
+                        (5)매우불만
+                      </td>
+                      <td>
+                        <div class="row me-2">
+                          <div class="col-6">
+                            <a
+                              href="#collapseTarget3"
+                              data-bs-toggle="collapse"
+                              class="btn btn-outline-dark btn-sm"
+                            >
+                              <i class="material-icons">edit</i>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                   
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget3">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget3">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. 헬스장 오픈, 마감시 시간을 정확히 준수하였습니까?</td>
+                      <td>
+                        (1)매우만족
+                        (2)만족
+                        (3)보통
+                        (4)불만
+                        (5)매우불만
+                      </td>
+                      <td>
+                        <div class="row me-2">
+                          <div class="col-6">
+                            <a
+                              href="#collapseTarget4"
+                              data-bs-toggle="collapse"
+                              class="btn btn-outline-dark btn-sm"
+                            >
+                              <i class="material-icons">edit</i>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                   
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget4">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget4">
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control m-0"
+                              placeholder="답변항목"
+                            />
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">add</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. 전반적인 센터 이용이 만족스러우셨습니까?</td>
+                      <td>
+                        (1)매우만족
+                        (2)만족
+                        (3)보통
+                        (4)불만
+                        (5)매우불만
+                      </td>
+                      <td>
+                        <div class="row me-2">
+                          <div class="col-6">
+                            <a
+                              href="#collapseTarget5"
+                              data-bs-toggle="collapse"
+                              class="btn btn-outline-dark btn-sm"
+                            >
+                              <i class="material-icons">edit</i>
+                            </a>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-outline-dark btn-sm">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                   
+                    <tr>
+                      <td>
+                        <div class="collapse" id="collapseTarget5">
+                          <textarea
+                            name=""
+                            id=""
+                            class="form-control"
+                            cols=""
+                            rows="5"
+                            placeholder="수정하실 문항 내용을 입력하세요"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <td colspan="6">
+                        <div class="row collapse" id="collapseTarget5">
                           <div class="col">
                             <input
                               type="text"

@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+//인덱스로 바로 날아감 슝~
 @WebServlet(urlPatterns = "")
 public class index_servlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
