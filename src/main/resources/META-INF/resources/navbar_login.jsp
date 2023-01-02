@@ -13,7 +13,7 @@
     ></a>
     <div class="navbar-nav">
       <div class="collapse navbar-collapse me-5" id="collapseID">
-        <a href="Survey.jsp" class="nav-link">설문하기</a>
+        <a href="/survey/Servlet" class="nav-link">설문하기</a>
         <div class="nav-item dropdown">
           <a
             href="#dropdownTarget"
