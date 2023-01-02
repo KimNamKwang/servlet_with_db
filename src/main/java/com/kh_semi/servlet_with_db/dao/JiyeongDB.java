@@ -15,7 +15,7 @@ public class JiyeongDB {
      * @throws SQLException
      */
     public ArrayList<HashMap> getUsers(String getUser) throws SQLException {
- 
+
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
         String query = "SELECT * FROM USER ";
@@ -66,22 +66,24 @@ public class JiyeongDB {
         return surveyInfo_list;
     }
 
-    public HashMap<String, Object> getSurveyInfoUid(String surveysUid) throws SQLException {
+    /* surveyUid를 parameter로 값을 받아오는 Function */
+    public HashMap<String, Object> getSurveyInfoUid(String surveyUid) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
 
         String query = "SELECT * FROM SURVEY_INFO " +
-                " WHERE SURVEY_UID = '" + surveysUid + "'";
+                " WHERE SURVEY_UID = '" + surveyUid + "'";
 
         ResultSet resultSet = statement.executeQuery(query);
-        HashMap<String, Object> result = null;
+        HashMap<String, Object> result = new HashMap<String, Object>();
         while (resultSet.next()) {
-            result = new HashMap<>();
+            result = new HashMap<String, Object>();
             result.put("SURVEY_UID", resultSet.getString("SURVEY_UID"));
             result.put("SURVEY_NAME", resultSet.getString("SURVEY_NAME"));
             result.put("SURVEY_COMMENT", resultSet.getString("SURVEY_COMMENT"));
             result.put("SURVEY_START_DATE", resultSet.getString("SURVEY_START_DATE"));
             result.put("SURVEY_END_DATE", resultSet.getString("SURVEY_END_DATE"));
+            result.put("SURVEY_UP_DATE", resultSet.getString("SURVEY_UP_DATE"));
         }
         return result;
     }
@@ -108,12 +110,12 @@ public class JiyeongDB {
         return question_answer_list;
     }
 
-    public HashMap<String, Object> getUserId(String userId) throws SQLException{
+    public HashMap<String, Object> getUserId(String userId) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
 
         String query = "SELECT * FROM USER " +
-                        " WHERE USER_ID = '" + userId + "'";
+                " WHERE USER_ID = '" + userId + "'";
 
         ResultSet resultSet = statement.executeQuery(query);
         HashMap<String, Object> result = null;
