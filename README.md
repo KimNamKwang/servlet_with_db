@@ -54,6 +54,8 @@
 
 -[DatasWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/DatasWithDB.java)
 
+<hr>
+
 <img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
 ## 🙋‍♂️김석진
@@ -88,6 +90,8 @@
 
 <img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
+<hr>
+
 ## 🙋‍♀️안지영
 
 ### 구현기능
@@ -120,7 +124,7 @@
 
 -[AdminWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/AdminWithDB.java)
 
-
+<hr>
 
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
