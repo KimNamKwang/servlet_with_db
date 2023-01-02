@@ -18,9 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <%@ include file= "navbar_base.jsp" %> <%--
+  <body style="font-family: 'IBM Plex Sans KR', cursive" >
+    <%@ include file= "navbar_base.jsp" %>
     <!-- ----------여기부터 main시작---------------- -->
     --%>
     <main>
@@ -194,9 +195,7 @@
         </div>
       </div>
     </main>
-    <%--
-    <!-- -------------------여기까지 main ------------------- -->
-    --%> <%@ include file= "footer.jsp" %>
+     <%@ include file= "footer.jsp" %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

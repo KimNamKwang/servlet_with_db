@@ -34,6 +34,26 @@
             >
           </div>
         </div>
+        <div class="nav-item dropdown">
+          <a
+            href="#dropdownTargetAdmin"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            >관리자</a
+          >
+          <div id="dropdownTargetAdmin" class="dropdown-menu">
+            <a
+              href="/Admin/usersServlet"
+              class="dropdown-item nav-link text-dark"
+              >회원 관리</a
+            >
+            <a
+              href="/Admin/surveysServlet"
+              class="dropdown-item nav-link text-dark"
+              >설문 관리</a
+            >
+          </div>
+        </div>
         <a href="loginServlet?logout=yes" class="nav-link">Logout</a>
         <a href="Mypage.jsp" class="nav-link">마이페이지</a>
       </div>

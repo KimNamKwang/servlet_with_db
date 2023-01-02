@@ -20,8 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-secondary bg-opacity-10">
+  <body style="font-family: 'IBM Plex Sans KR', cursive"  class="bg-secondary bg-opacity-10">
     <%@ include file= "navbar_login.jsp"  %>
     <main>
       <div class="container">

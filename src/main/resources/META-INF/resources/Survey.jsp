@@ -19,12 +19,13 @@
           href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
           rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
       </head>
 
-    <body class="bg-secondary bg-opacity-25">                       
+    <body style="font-family: 'IBM Plex Sans KR', cursive"  class="bg-secondary bg-opacity-25">                       
     <% ArrayList<HashMap> question = (ArrayList<HashMap>)request.getAttribute("question");
       ArrayList<HashMap> answer = (ArrayList<HashMap>) request.getAttribute("answer");%>
-   
+        <%@ include file= "navbar_login.jsp"  %>
     <main>
     <main class="d-flex align-items-center mt-10" >
         <div class="container" style="margin-top: 120px; margin-bottom: 120px">
@@ -57,7 +58,7 @@
         </form>
       </div>
     </main>
-
+    <%@ include file= "footer.jsp" %>
 
 
     <script

@@ -24,8 +24,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-secondary bg-opacity-10">
+  <body style="font-family: 'IBM Plex Sans KR', cursive"  class="bg-secondary bg-opacity-10">
     <%@ include file= "navbar_login.jsp"  %>
     <div class="container">
       <div class="fs-4 fw-bold pb-3  pt-5 mt-4">📄 설문 관리</div>

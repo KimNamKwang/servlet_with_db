@@ -18,8 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body style="font-family: 'IBM Plex Sans KR', cursive">
     <%@ include file= "navbar_base.jsp" %> <%--
     <!-- ----------여기부터 main시작---------------- -->
     --%>

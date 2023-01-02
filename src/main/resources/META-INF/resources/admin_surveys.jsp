@@ -20,16 +20,20 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-secondary bg-opacity-10">
+  <body style="font-family: 'IBM Plex Sans KR', cursive" class="bg-secondary bg-opacity-10">
     <%@ include file= "navbar_login.jsp"  %>
     <main>
       <div class="container">
+        <% 
+        ArrayList<HashMap> surveyInfo_list = (ArrayList<HashMap>)request.getAttribute("surveyInfo_list");
+          %>
         <div class="fs-4 fw-bold pb-3 pt-5 mt-4">📄 설문 관리</div>
-        <div class="text-secondary">총 1건</div>
+        <div class="text-secondary">총 <%= surveyInfo_list.size() %>건</div>
         <div class="bg-light ps-4 pe-4 pb-1 mt-2 mb-2">
           <table class="table">
-            <thead>
+            <thead class="border-bottom border-3">
               <tr class="text-center">
                 <th class="text-nowrap">번호</th>
                 <th class="text-nowrap">설문명</th>
@@ -40,11 +44,6 @@
               </tr>
             </thead>
             <tbody>
-              <% 
-              ArrayList<HashMap> surveyInfo_list = (ArrayList<HashMap>)request.getAttribute("surveyInfo_list");
-                
-                %> 
-
                 <% for(int i = 0; i < surveyInfo_list.size(); i++) { %>
                   <%  HashMap<String, Object> surveyInfo = surveyInfo_list.get(i); %>
                     <tr>
@@ -59,7 +58,7 @@
                       <td>
                     <form action="/Admin/surveyDetailServlet" method="get">
                     <div class="text-center">
-                      <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailServlet?Survey_UID=<%= surveyInfo.get("SURVEY_UID")  %></a>">수정</a>
+                      <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailsServlet?Survey_UID=<%= surveyInfo.get("SURVEY_UID")  %></a>">수정</a>
                       <button
                         class="btn btn-outline-dark btn-sm text-nowrap"
                       >
@@ -79,7 +78,7 @@
             type="submit"
             class="btn btn-secondary btn-sm text-nowrap"
           >
-            등록
+            설문 등록
           </button>
         </form>
         </div>
