@@ -24,11 +24,8 @@ public class SurveyServlet extends HttpServlet {
         String question_id = request.getParameter("QUESTION_ID");
 
         SurveyWithDB surveyWithDB = new SurveyWithDB();
-<<<<<<< HEAD
-=======
-        DatasWithDB datasWithDB = new DatasWithDB();
 
->>>>>>> d9ebae36f7776f81ba63c6d7692ef8b7c773c559
+        DatasWithDB datasWithDB = new DatasWithDB();
         HashMap<String, Object> question = null;
         ArrayList<HashMap> answer_list = null;
 
@@ -41,21 +38,21 @@ public class SurveyServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-<<<<<<< HEAD
+
            
      
         for(int i = 0; i < answer_list.size(); i++) {
             HashMap<String,Object> answer =  answer_list.get(i);
-=======
+            System.out.println(answer.get("ORDERS"));
+            System.out.println(answer.get("ANSWER"));
 
-        HashMap<String, Object> answer = new HashMap<String, Object>();
-        for (int i = 0; i < answer_list.size(); i++) {
+        
 
             answer = answer_list.get(i);
 
             System.out.println(answer.get("QUESTION"));
             System.out.println(answer.get("ANSWER"));
->>>>>>> d9ebae36f7776f81ba63c6d7692ef8b7c773c559
+
             System.out.println(answer.get("ORDERS"));
             System.out.println(answer.get("ANSWER"));
            
