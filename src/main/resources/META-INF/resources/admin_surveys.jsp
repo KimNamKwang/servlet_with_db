@@ -39,25 +39,26 @@
               </tr>
             </thead>
             <tbody>
-              <form action="/Admin/surveyDetailServlet" method="get">
-                <%
-                ArrayList<HashMap> serveyInfo_list = (ArrayList<HashMap>)request.getAttribute("serveyInfo_list");
-                %>
-                <% for(int i = 0; i < serveyInfo_list.size(); i++){ %>
-                  <% HashMap<String, Object> serveyInfo = serveyInfo_list.get(i); %>
-                  <tr>
-                  <td class="text-center"><%= i+1 %></td>
-                  <td>
-                    <%= serveyInfo.get("SERVEY_NAME") %></td>
-                  <td><%= serveyInfo.get("SERVEY_COMMENT") %></td>
-                  <td class="text-center">
-                    <span class="text-nowrap"><%= serveyInfo.get("SERVEY_START_DATE") %></span>
-                    <span class="text-nowrap">~ <%= serveyInfo.get("SERVEY_END_DATE") %></span>
-                  </td>
-                  <td class="text-nowrap"><%= serveyInfo.get("SERVEY_UP_DATE") %></td>
-                  <td>
+              <% 
+              ArrayList<HashMap> surveyInfo_list = (ArrayList<HashMap>)request.getAttribute("surveyInfo_list");
+                
+                %> 
+
+                <% for(int i = 0; i < surveyInfo_list.size(); i++) { %>
+                  <%  HashMap<String, Object> surveyInfo = surveyInfo_list.get(i); %>
+                    <tr>
+                      <td class="text-center"><%= i + 1 %></td>
+                      <td><%=  surveyInfo.get("SURVEY_NAME")  %></td>
+                      <td><%=  surveyInfo.get("SURVEY_COMMENT")  %></td>
+                      <td class="text-center">
+                        <span class="text-nowrap"><%=  surveyInfo.get("SURVEY_START_DATE")  %></span>
+                        <span class="text-nowrap">~ <%=  surveyInfo.get("SURVEY_END_DATE")  %></span>
+                      </td>
+                      <td class="text-nowrap"><%=  surveyInfo.get("SURVEY_UP_DATE")  %></td>
+                      <td>
+                    <form action="/Admin/surveyDetailServlet" method="get">
                     <div class="text-center">
-                      <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailServlet?SERVEY_UID=<%= serveyInfo.get("SERVEY_UID") %>">수정</a>
+                      <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailServlet?Survey_UID=<%= surveyInfo.get("SURVEY_UID")  %></a>">수정</a>
                       <button
                         class="btn btn-outline-dark btn-sm text-nowrap"
                       >
@@ -66,7 +67,7 @@
                     </div>
                   </td>
                 </tr>
-                <% } %>
+                <%  } %>
               
             </tbody>
           </table>

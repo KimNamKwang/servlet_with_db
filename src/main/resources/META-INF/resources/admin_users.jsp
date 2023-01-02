@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
 import = "java.util.HashMap, java.util.ArrayList "%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -54,9 +54,9 @@ import = "java.util.HashMap, java.util.ArrayList "%>
                   <td><%=  user.get("SURVEYED")  %></td>
                   <td>
                     <a
-                    href="#modalUpdate"
                     data-bs-toggle="modal"
                     class="btn btn btn-outline-dark btn-sm"
+                    href="#modalUpdate"
                     >수정</a
                     >
                     <button class="btn btn btn-outline-dark btn-sm">탈퇴</button>

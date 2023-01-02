@@ -14,11 +14,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+  
 @WebServlet(urlPatterns = "/Admin/usersServlet")
 /**
  * modal창에는 for문이 적용이 안 됩니다...
- * 강사님께 물어보고 적용방법이 있는지 알아봐야 할 둣
+ * 강사님께 물어보고 적용방 법이 있는지 알아봐야 할 둣
  * 
  */
 public class Admin_usersServlet extends HttpServlet {
