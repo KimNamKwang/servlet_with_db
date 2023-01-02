@@ -35,8 +35,7 @@
           </div>
         </div>
         <a href="loginServlet?logout=yes" class="nav-link">Logout</a>
-        <a href="/join/agreementServlet" class="nav-link">Join</a>
-        <a href="index.jsp" class="nav-link">마이페이지</a>
+        <a href="Mypage.jsp" class="nav-link">마이페이지</a>
       </div>
     </div>
   </div>
