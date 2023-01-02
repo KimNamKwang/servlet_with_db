@@ -24,7 +24,7 @@ public class SurveyServlet extends HttpServlet {
         SurveyWithDB surveyWithDB = new SurveyWithDB();
         ArrayList<HashMap> answer = null;
         ArrayList<HashMap> question = null;
-        
+
         try {
             question = SurveyWithDB.getQuestion();
             answer = SurveyWithDB.getAnswersList();
@@ -32,7 +32,7 @@ public class SurveyServlet extends HttpServlet {
                 HashMap<String, Object> questions_list = question.get(i);
             }
             answer = SurveyWithDB.getAnswersList();
-        } catch (SQLException e) {         
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         for (int i = 0; i < answer.size(); i++) {
@@ -42,7 +42,7 @@ public class SurveyServlet extends HttpServlet {
         request.setAttribute("question", question);
         request.setAttribute("answer", answer);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Survey.jsp");
         requestDispatcher.forward(request, response);
     }
 }
