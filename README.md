@@ -28,7 +28,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/111833622?v=4" width="80">
 
-## 🙋‍♂️김남광
+## 김남광
 
 ### 회원가입
 
@@ -56,7 +56,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
-## 🙋‍♂️김석진
+## 김석진
 
 ### 메인페이지, 로그인, 마이페이지
 
@@ -88,7 +88,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
-## 🙋‍♀️안지영
+## 안지영
 
 ### 관리자 페이지(회원 관리, 설문 관리)
 
@@ -122,4 +122,4 @@
 
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
-## 🙋‍♂️이재현
+## 이재현
