@@ -60,6 +60,32 @@
 
 #### 구현기능
 
+##### 메인페이지, 로그인, 마이페이지
+
+##### JSP
+
+-[navbar_base.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/navbar_base.jsp)
+
+-[navbar_login.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/navbar_login.jsp)
+
+-[index.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/index.jsp)
+
+-[Mypage.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Mypage.jsp)
+
+-[footer.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/footer.jsp)
+
+##### Servlet
+
+-[index_servlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/index_servlet.java)
+
+-[loginServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/loginServlet.java)
+
+-[MyPageServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/MyPageServlet.java)
+
+##### DB
+
+-[UserWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/UserWithDB.java)
+
 ### 안지영
 
 <img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
