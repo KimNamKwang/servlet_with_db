@@ -36,7 +36,7 @@
             <% for(int i=0;i<question.size();i++){  
               HashMap<String, Object> questions_list = question.get(i);%>
               <div><%= (i+1) %>. <%= questions_list.get("QUESTION") %></div>
-                <div class="row">
+                <div class="row mt-1">
                     <div class="row mb-3 ">
                         <% for(int j=0;j<answer.size();j++){ 
                         HashMap<String, Object> answers_list = answer.get(j);%>
@@ -49,12 +49,8 @@
                 </div>
             <% } %>
             <div class="mt-5">
-                <a
-                  class="btn btn-secondary fw-bold ps-4 pe-4"
-                  href="Survey_submit.html"
-                >
-                  제출하기
-                </a>
+               
+                <button type="submit"  class="btn btn-secondary fw-bold ps-4 pe-4">제출하기</button>
               </div>
           </div>
         </form>
