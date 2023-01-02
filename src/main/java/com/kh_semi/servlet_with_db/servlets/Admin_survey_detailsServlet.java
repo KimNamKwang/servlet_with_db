@@ -13,7 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+  
 @WebServlet(urlPatterns = "/Admin/surveyDetailServlet")
 public class Admin_survey_detailsServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -45,7 +45,7 @@ public class Admin_survey_detailsServlet extends HttpServlet{
 
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_suvey_details.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_survey_details.jsp");
         requestDispatcher.forward(request, response);
 
     }
