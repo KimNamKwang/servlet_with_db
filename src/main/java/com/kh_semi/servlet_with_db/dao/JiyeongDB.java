@@ -15,7 +15,7 @@ public class JiyeongDB {
      * @throws SQLException
      */
     public ArrayList<HashMap> getUsers(String getUser) throws SQLException {
-
+ 
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
         String query = "SELECT * FROM USER ";
@@ -106,6 +106,28 @@ public class JiyeongDB {
             question_answer_list.add(question_answer);
         }
         return question_answer_list;
+    }
+
+    public HashMap<String, Object> getUserId(String userId) throws SQLException{
+        Commons commons = new Commons();
+        Statement statement = commons.getStatement();
+
+        String query = "SELECT * FROM USER " +
+                        " WHERE USER_ID = '" + userId + "'";
+
+        ResultSet resultSet = statement.executeQuery(query);
+        HashMap<String, Object> result = null;
+        while (resultSet.next()) {
+            result = new HashMap<>();
+            result.put("NAME", resultSet.getString("NAME"));
+            result.put("USER_ID", resultSet.getString("USER_ID"));
+            result.put("PASSWORD", resultSet.getString("PASSWORD"));
+            result.put("PHONE_NUMBER", resultSet.getString("PHONE_NUMBER"));
+            result.put("USER_EMAIL", resultSet.getString("USER_EMAIL"));
+            result.put("ADDRESS", resultSet.getString("ADDRESS"));
+            result.put("JOIN_DATE", resultSet.getString("JOIN_DATE"));
+        }
+        return result;
     }
 
 }
