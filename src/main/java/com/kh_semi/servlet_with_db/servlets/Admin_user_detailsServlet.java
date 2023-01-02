@@ -13,12 +13,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/Admin/userDetailServlet")
+// @WebServlet(urlPatterns = "/Admin/userDetailServlet")
 public class Admin_user_detailsServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         String userId = request.getParameter("USER_ID");
-
         JiyeongDB jiyeongDB = new JiyeongDB();
 
         HashMap<String, Object> userInfo = null;

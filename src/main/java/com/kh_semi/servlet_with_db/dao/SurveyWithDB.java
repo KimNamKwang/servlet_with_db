@@ -6,74 +6,36 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class SurveyWithDB {
-
-    public HashMap<String, Object> getQuestion(String question_id) throws SQLException {
-
+    public static ArrayList<HashMap> getAnswersList() throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
-
-        String query = "SELECT * FROM QUESTION " +
-                " WHERE QUESTION_ID = '" + question_id + "'";
-
+        String query = "SELECT * FROM ANSWER";
         ResultSet resultSet = statement.executeQuery(query);
-        
-        HashMap<String, Object> result = new HashMap<String, Object>();
+        ArrayList<HashMap> answerList = new ArrayList<HashMap>();
         while (resultSet.next()) {
-              
-                result.put("QUESTION", resultSet.getString("QUESTION"));
-                result.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
-                result.put("ORDERS", resultSet.getInt("ORDERS"));
-         }
-         return result;
-    }
-
-  
-    public ArrayList<HashMap> getAnswerList(String servey_id) throws SQLException{
-        
-        Commons commons = new Commons();
-        Statement statement = commons.getStatement();
-        String query = "SELECT ANSWER_LIST.QUESTION_ID, ANSWER.ORDERS, ANSWER.ANSWER" +
-                        "FROM ANSWER_LIST" +
-                        "INNER JOIN ANSWER" +
-                        "ON ANSWER_LIST = ANSWER.ANSWER_ID " +
-                        "WHERE QUESTION_ID = '"+servey_id+"' "+
-                         "ORDER BY QUESTION_ID";
-        ResultSet resultSet = statement.executeQuery(query);
-
-        ArrayList<HashMap> answer_list = new ArrayList<HashMap>();
-        while(resultSet.next()){
             HashMap<String, Object> answer = new HashMap<String, Object>();
-            answer.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
+            answer.put("ANSWER_ID", resultSet.getString("ANSWER_ID"));
             answer.put("ORDERS", resultSet.getInt("ORDERS"));
             answer.put("ANSWER", resultSet.getString("ANSWER"));
-
-            answer_list.add(answer);
+            answerList.add(answer);
         }
-        return answer_list;
+        return answerList;
     }
 
-    // question 테이블 전체를 가져오는 function
-    public ArrayList<HashMap> getQuestionInfo(String questionInfo_id) throws SQLException{
-        
+    public static ArrayList<HashMap> getQuestion() throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
-        String query = "SELECT * FROM QUESTION ";
+        String query = "SELECT * FROM QUESTION";
         ResultSet resultSet = statement.executeQuery(query);
-
-        ArrayList<HashMap> questionInfo_list = new ArrayList<HashMap>();
- 
-        while(resultSet.next()) {
-            HashMap<String, Object> questionInfo = new HashMap<String, Object>();
-            questionInfo.put("QUESTION", resultSet.getString("QUESTION"));
-            questionInfo.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
-            questionInfo.put("ORDERS", resultSet.getString("ORDERS"));
-           
-       
-            questionInfo_list.add(questionInfo);
+        ArrayList<HashMap> result = new ArrayList<HashMap>();
+        while (resultSet.next()) {
+            HashMap<String, Object> question = new HashMap<String, Object>();
+            question.put("QUESTION_ID", resultSet.getString("QUESTION_ID"));
+            question.put("ORDERS", resultSet.getString("ORDERS"));
+            question.put("QUESTION", resultSet.getString("QUESTION"));
+            result.add(question);
         }
-        return questionInfo_list;
+        return result;
     }
-        
 }
