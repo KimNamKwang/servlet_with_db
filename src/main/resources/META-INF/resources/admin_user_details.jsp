@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +31,10 @@
         >
           <div>
             <table class="table align-middle">
+              <% 
+            HashMap<String, Object> userInfo = (HashMap<String, Object>)request.getAttribute("userInfo");
+                
+                %> 
               <tr>
                 <th>이름 *</th>
                 <td>
@@ -35,7 +42,7 @@
                     type="text"
                     class="form-control w-50"
                     name="userName"
-                    value=""
+                    value="<%= userInfo.get("NAME") %>"
                   />
                 </td>
               </tr>
@@ -47,7 +54,7 @@
                     class="form-control w-50"
                     name="userId"
                     disabled
-                    placeholder="userId"
+                    placeholder="<%= userInfo.get("USER_ID") %>"
                   />
                 </td>
               </tr>
@@ -58,19 +65,24 @@
                     type="text"
                     class="form-control w-50"
                     name="userPassword"
-                    value=""
+                    value="<%= userInfo.get("PASSWORD") %>"
                   />
                 </td>
               </tr>
               <tr>
                 <th>이메일</th>
                 <td class="row d-flex align-items-center">
+                  <%
+                      String userEmail = (String) userInfo.get("USER_EMAIL");
+                      String userEmail1 = userEmail.substring(0, userEmail.indexOf('@'));
+                      String userEmail2 = userEmail.substring(userEmail.indexOf('@') + 1, userEmail.length());
+                    %>
                   <div class="col">
                     <input
                       type="text"
                       class="form-control"
                       name="userEmail1"
-                      value=""
+                      value="<%= userEmail1 %>"
                     />
                   </div>
                   @
@@ -79,6 +91,7 @@
                       type="text"
                       class="form-control"
                       name="userEmailPlatform"
+                      value="<%= userEmail2 %>"
                     />
                   </div>
                   <div class="col-auto">
@@ -94,6 +107,12 @@
               <tr>
                 <th>연락처 *</th>
                 <td class="row">
+                  <%
+                  String phone_number = (String) userInfo.get("PHONE_NUMBER");
+                  String phoneFirst = phone_number.substring(0, phone_number.indexOf('-'));
+                  String phoneSecond = phone_number.substring(4, phone_number.indexOf('-', 4));
+                  String phoneThird = phone_number.substring(9, phone_number.length());          
+                  %>
                   <div class="col">
                     <select class="form-select" name="userPhoneFirst">
                       <option value="010">010</option>
@@ -110,7 +129,7 @@
                       type="text"
                       class="form-control"
                       name="userPhoneSecond"
-                      value=""
+                      value="<%= phoneSecond %>"
                     />
                   </div>
                   <div class="col-auto">-</div>
@@ -119,7 +138,7 @@
                       type="text"
                       class="form-control"
                       name="userPhoneThird"
-                      value=""
+                      value="<%= phoneThird %>"
                     />
                   </div>
                 </td>
@@ -131,7 +150,7 @@
                     type="text"
                     class="form-control"
                     name="userAddress"
-                    value=""
+                    value="<%= userInfo.get("ADDRESS") %>"
                   />
                   <div class="row d-flex flex-row align-items-center mt-1">
                     <div class="col">
@@ -139,7 +158,7 @@
                         type="text"
                         class="col form-control"
                         name="userAddressAdd"
-                        value=""
+                        value="<%= userInfo.get("ADDRESSADD") %>"
                       />
                     </div>
                     <div class="col-auto">[나머지주소입력]</div>

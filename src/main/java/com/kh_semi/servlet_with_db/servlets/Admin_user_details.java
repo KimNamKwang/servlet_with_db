@@ -27,7 +27,6 @@ public class Admin_user_details extends HttpServlet {
             userInfo_details_list = jiyeongDB.getUsers(userId);
             userInfo = jiyeongDB.getUserId(userId);
         } catch (SQLException e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
         System.out.println(userInfo.get("NAME"));
@@ -37,6 +36,24 @@ public class Admin_user_details extends HttpServlet {
         System.out.println(userInfo.get("USER_EMAIL"));
         System.out.println(userInfo.get("ADDRESS"));
         System.out.println(userInfo.get("ADDRESSADD"));
+
+        String userEmail = (String) userInfo.get("USER_EMAIL");
+        String userEmail1 = userEmail.substring(0, userEmail.indexOf('@'));
+        String userEmail2 = userEmail.substring(userEmail.indexOf('@') + 1, userEmail.length());
+        System.out.println(userEmail1);
+        System.out.println(userEmail2);
+
+        String phone_number = (String) userInfo.get("PHONE_NUMBER");
+        String phoneFirst = phone_number.substring(0, phone_number.indexOf('-'));
+        String phoneSecond = phone_number.substring(4, phone_number.indexOf('-', 4));
+        String phoneThird = phone_number.substring(9, phone_number.length());
+        System.out.println(phoneFirst);
+        System.out.println(phoneSecond);
+        System.out.println(phoneThird);
+
+
+
+
        
 
         request.setAttribute("userInfo", userInfo);

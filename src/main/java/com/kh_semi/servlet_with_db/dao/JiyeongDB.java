@@ -110,6 +110,7 @@ public class JiyeongDB {
         return question_answer_list;
     }
 
+    // 파라미터로 받은 userId에 해당하는 row 데이터
     public HashMap<String, Object> getUserId(String userId) throws SQLException {
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
@@ -127,6 +128,7 @@ public class JiyeongDB {
             result.put("PHONE_NUMBER", resultSet.getString("PHONE_NUMBER"));
             result.put("USER_EMAIL", resultSet.getString("USER_EMAIL"));
             result.put("ADDRESS", resultSet.getString("ADDRESS"));
+            result.put("ADDRESSADD", resultSet.getString("ADDRESSADD"));
             result.put("JOIN_DATE", resultSet.getString("JOIN_DATE"));
         }
         return result;
