@@ -92,6 +92,37 @@
 
 #### 구현기능
 
+##### 관리자 페이지(회원 관리, 설문 관리)
+
+##### JSP
+
+-[admin_users.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_users.jsp)
+
+-[admin_user_details.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_user_details.jsp)
+
+-[admin_surveys.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_surveys.jsp)
+
+-[admin_survey_details.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_survey_details.jsp)
+
+##### Servlet
+
+-[AdminUsersServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/Admin_usersServlet.java)
+
+-[AdminUserDetailsServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminUserDetailsServlet.java)
+
+-[AdminUserSaveServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminUserSaveServlet.java)
+
+-[AdminSurveysServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminSurveysServlet.java)
+
+-[AdminSurveyDetailsServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminSurveyDetailsServlet.java)
+
+##### DB
+
+-[AdminWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/AdminWithDB.java)
+
+
+
+
 ### 이재현
 
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
