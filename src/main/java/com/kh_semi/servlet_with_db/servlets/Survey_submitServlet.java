@@ -1,7 +1,7 @@
 package com.kh_semi.servlet_with_db.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 import org.springframework.cglib.proxy.Dispatcher;
 
@@ -16,7 +16,8 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet(urlPatterns = "/survey/SubmitServlet")
 public class Survey_submitServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+        throws IOException, ServletException {
+        HttpSession httpSession = request.getSession();        
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Survey_submit.jsp");
