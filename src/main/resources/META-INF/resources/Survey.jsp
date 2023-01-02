@@ -48,9 +48,10 @@
                     </div>
                 </div>
             <% } %>
-            <div class="mt-5">
-               
+            <div class="ms-5 d-flex justify-content-center">
+               <a href="./survey_submit.jsp" class="btn btn-secondary fw-bold ps-4 pe-4>
                 <button type="submit"  class="btn btn-secondary fw-bold ps-4 pe-4">제출하기</button>
+              </a>
               </div>
           </div>
         </form>
