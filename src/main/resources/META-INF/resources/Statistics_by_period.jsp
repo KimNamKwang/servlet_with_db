@@ -20,6 +20,7 @@
     />
   </head>
   <body>
+  <%@ include file= "navbar_login.jsp"  %>
       <!-- ---------여기부터 main부분------------ -->
       <main>
         <div class="container-fluid text-center" style="margin-top: 120px; margin-bottom: 120px;">
@@ -31,8 +32,8 @@
                     data-bs-toggle="dropdown"
                     >통계</a>
                   <ul class="dropdown-menu">
-                    <a href="Statistics_by_member.html" class="dropdown-item">회원별 통계</a>
-                    <a href="Statistics_by_period.html" class="dropdown-item active" >전체 통계</a>
+                    <a href="Statistics_by_member.jsp" class="dropdown-item">회원별 통계</a>
+                    <a href="Statistics_by_period.jsp" class="dropdown-item active" >전체 통계</a>
                   </ul>
               </div>
           </div>
@@ -224,6 +225,7 @@
       </div>
       </main>
     <!-------------- 여기까지 main부분입니다 -------------------->
+    <%@ include file= "footer.jsp" %>
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
