@@ -10,19 +10,26 @@ import com.kh_semi.servlet_with_db.dao.JiyeongDB;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// @WebServlet(urlPatterns = "/Admin/userDetailServlet")
-public class Admin_user_detailsServlet {
+@WebServlet(urlPatterns = "/Admin/userDetailServlet")
+public class Admin_user_details extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, ServletException, IOException {
+            throws ServletException, IOException {
         String userId = request.getParameter("USER_ID");
         JiyeongDB jiyeongDB = new JiyeongDB();
 
         HashMap<String, Object> userInfo = null;
         ArrayList<HashMap> userInfo_details_list = null;
-        userInfo = jiyeongDB.getUserId(userId);
+        try {
+            userInfo_details_list = jiyeongDB.getUsers(userId);
+            userInfo = jiyeongDB.getUserId(userId);
+        } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
         System.out.println(userInfo.get("NAME"));
         System.out.println(userInfo.get("USER_ID"));
         System.out.println(userInfo.get("PASSWORD"));
@@ -30,7 +37,7 @@ public class Admin_user_detailsServlet {
         System.out.println(userInfo.get("USER_EMAIL"));
         System.out.println(userInfo.get("ADDRESS"));
         System.out.println(userInfo.get("ADDRESSADD"));
-        userInfo_details_list = jiyeongDB.getUsers(userId);
+       
 
         request.setAttribute("userInfo", userInfo);
 
