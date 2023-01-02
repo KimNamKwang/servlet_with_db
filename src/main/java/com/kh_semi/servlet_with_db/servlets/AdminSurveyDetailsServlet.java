@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.kh_semi.servlet_with_db.dao.JiyeongDB;
+import com.kh_semi.servlet_with_db.dao.AdminWithDB;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -19,7 +19,7 @@ public class AdminSurveyDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         String surveyInfo_Uid = request.getParameter("SURVEY_UID");
-        JiyeongDB jiyeongDB = new JiyeongDB();
+        AdminWithDB jiyeongDB = new AdminWithDB();
 
         HashMap<String, Object> surveyInfo = null;
 

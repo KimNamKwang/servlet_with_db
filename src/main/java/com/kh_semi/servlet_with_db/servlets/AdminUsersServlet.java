@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.kh_semi.servlet_with_db.dao.JiyeongDB;
+import com.kh_semi.servlet_with_db.dao.AdminWithDB;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -20,7 +20,7 @@ public class AdminUsersServlet extends HttpServlet {
             throws IOException, ServletException {
         String userId = request.getParameter("USER_ID");
 
-        JiyeongDB jiyeongDB = new JiyeongDB();
+        AdminWithDB jiyeongDB = new AdminWithDB();
         ArrayList<HashMap> user_list = null;
         try {
             user_list = jiyeongDB.getUsers(userId);
