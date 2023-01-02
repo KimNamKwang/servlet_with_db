@@ -15,7 +15,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/Admin/userDetailServlet")
 public class Admin_user_detailsServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException  {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
         String userId = request.getParameter("USER_ID");
 
         JiyeongDB jiyeongDB = new JiyeongDB();
@@ -31,7 +32,6 @@ public class Admin_user_detailsServlet {
         System.out.println(userInfo.get("ADDRESS"));
         System.out.println(userInfo.get("ADDRESSADD"));
         userInfo_details_list = jiyeongDB.getUsers(userId);
-
 
         request.setAttribute("userInfo", userInfo);
 
