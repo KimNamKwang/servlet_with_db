@@ -14,7 +14,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-  
+
 @WebServlet(urlPatterns = "/Admin/usersServlet")
 /**
  * modal창에는 for문이 적용이 안 됩니다...
