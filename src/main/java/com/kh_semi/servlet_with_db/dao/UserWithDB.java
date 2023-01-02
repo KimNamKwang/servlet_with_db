@@ -16,6 +16,8 @@ public class UserWithDB {
 
         // parameter로 들어오는 name 로 대상을 찾는 쿼리
         String query = "SELECT * FROM USER WHERE USER_ID ='" + USER_ID + "';";
+
+        // 총기 분해
         String email = "hong@naver.com";
         String first = email.substring(0, email.indexOf('@'));
         String second = email.substring(email.indexOf('@') + 1, email.length());

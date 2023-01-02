@@ -21,6 +21,7 @@
     />
   </head>
   <body>
+
    <%
       HashMap<String, Object> userDB = (HashMap<String, Object>) session.getAttribute("userDB");
       
@@ -42,6 +43,7 @@
         String phoneThird = phone_number.substring(9, phone_number.length());
         
     %>
+    <%@ include file= "navbar_login.jsp"  %>
     <main>
       <div class="container" style="margin-top: 50px; margin-bottom: 120px">
         <div
@@ -191,6 +193,7 @@
       </div>
     </form>
     </main>
+    <%@ include file= "footer.jsp" %>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
