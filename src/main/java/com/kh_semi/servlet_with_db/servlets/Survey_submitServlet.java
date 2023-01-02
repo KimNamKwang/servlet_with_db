@@ -1,9 +1,9 @@
 package com.kh_semi.servlet_with_db.servlets;
 
 import java.io.IOException;
+import java.lang.reflect.Member;
 
-
-import org.springframework.cglib.proxy.Dispatcher;
+import com.kh_semi.servlet_with_db.dao.SurveyWithDB;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -15,20 +15,35 @@ import jakarta.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = "/survey/SubmitServlet")
 public class Survey_submitServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws IOException, ServletException {
-        HttpSession httpSession = request.getSession();        
-        response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
+@Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws IOException, ServletException {
+        
+    //     SurveyWithDB db = new SurveyWithDB();
+    //     HttpSession httpSession = request.getSession();        
+    //     Member loginUser = (Member)httpSession.getAttribute("loginUser");
+    //     int result;
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Survey_submit.jsp");
-        requestDispatcher.forward(request, response);
+    //     String userUid = loginUser.getUsersUid();
+    //     String Q1 = request.getParameter("QUESTION1");
+    //     String Q2 = request.getParameter("QUESTION2");
+    //     String Q3 = request.getParameter("QUESTION3");
+    //     String Q4 = request.getParameter("QUESTION4");
+    //     String Q5 = request.getParameter("QUESTION5");
+    //     try {
+    //         System.out.println();
+    //         db.insertSurvey(userUid, Q1, Q2, Q3, Q4, Q5);
 
-    }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /* super가 아니라 this를 쓰면 doGet이 실행되게 된다. */
-        this.doGet(req, resp);
+        
+    //     RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Survey_submit.jsp");
+    //     requestDispatcher.forward(request, response);
+
+    // } catch (Exception e) {
+    //     e.printStackTrace();
+    // }
+
+    // RequestDispatcher requestDispatcher = request.getRequestDispatcher("survey_submit.jsp");
+    // requestDispatcher.forward(request, response);
     }
 
 }

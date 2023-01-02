@@ -38,4 +38,10 @@ public class SurveyWithDB {
         }
         return result;
     }
+
+    public void insertSurvey(String user_ID,String QUESTION1,String QUESTION2,String QUESTION3,String QUESTION4,String QUESTION5) throws SQLException{
+        Commons commons = new Commons();
+        Statement statement = commons.getStatement();
+    }
+
 }
