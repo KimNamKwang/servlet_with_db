@@ -1,8 +1,8 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Holy_Moly&fontSize=70" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Holy_Moly&fontSize=70" />
 
 # Servlet_with_db
 
-## 헬스장 설문 조사
+## 헬스장 설문 페이지
 
 ### 프로젝트 기간 2022.12.27 ~ 2023.01.03
 
@@ -24,17 +24,15 @@
 
 <img src="https://img.shields.io/badge/My%20SQL%20Workbench-188038?style=flat&logo=MySQL&logoColor=white" />
 
-## 팀구성
-
-### 김남광
+# 팀구성
 
 <img src="https://avatars.githubusercontent.com/u/111833622?v=4" width="80">
 
-#### 구현기능
+## 김남광
 
-##### 회원가입
+### 회원가입
 
-##### JSP
+#### JSP
 
 -[join_main.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Join_main.jsp)
 
@@ -42,7 +40,7 @@
 
 -[Join_agreement.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Join_agreement.jsp)
 
-##### Servlet
+#### Servlet
 
 -[join_mainservlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/join_mainservlet.java)
 
@@ -50,19 +48,19 @@
 
 -[join_agreementServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/join_agreementServlet.java)
 
-##### DB
+#### DB
 
 -[DatasWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/DatasWithDB.java)
 
-### 김석진
+<hr>
 
 <img src="https://avatars.githubusercontent.com/u/67856821?v=4" width="80">
 
-#### 구현기능
+## 김석진
 
-##### 메인페이지, 로그인, 마이페이지
+### 메인페이지, 로그인, 마이페이지
 
-##### JSP
+#### JSP
 
 -[navbar_base.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/navbar_base.jsp)
 
@@ -74,7 +72,7 @@
 
 -[footer.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/footer.jsp)
 
-##### Servlet
+#### Servlet
 
 -[index_servlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/index_servlet.java)
 
@@ -82,18 +80,46 @@
 
 -[MyPageServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/MyPageServlet.java)
 
-##### DB
+#### DB
 
 -[UserWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/UserWithDB.java)
 
-### 안지영
+<hr>
 
 <img src="https://avatars.githubusercontent.com/u/109323666?v=4" width="80">
 
-#### 구현기능
+## 안지영
 
-### 이재현
+### 관리자 페이지(회원 관리, 설문 관리)
+
+#### JSP
+
+-[admin_users.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_users.jsp)
+
+-[admin_user_details.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_user_details.jsp)
+
+-[admin_surveys.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_surveys.jsp)
+
+-[admin_survey_details.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/admin_survey_details.jsp)
+
+#### Servlet
+
+-[AdminUsersServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/Admin_usersServlet.java)
+
+-[AdminUserDetailsServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminUserDetailsServlet.java)
+
+-[AdminUserSaveServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminUserSaveServlet.java)
+
+-[AdminSurveysServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminSurveysServlet.java)
+
+-[AdminSurveyDetailsServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/AdminSurveyDetailsServlet.java)
+
+#### DB
+
+-[AdminWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/AdminWithDB.java)
+
+<hr>
 
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
-#### 구현기능
+## 이재현
