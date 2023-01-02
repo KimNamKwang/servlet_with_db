@@ -21,12 +21,10 @@ public class SurveyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
-
-        // String ID = (String) httpSession.getAttribute("USER_ID");
-
         SurveyWithDB surveyWithDB = new SurveyWithDB();
         ArrayList<HashMap> answer = null;
         ArrayList<HashMap> question = null;
+        
         try {
             question = SurveyWithDB.getQuestion();
             answer = SurveyWithDB.getAnswersList();
