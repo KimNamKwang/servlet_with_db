@@ -21,9 +21,10 @@
     />
   </head>
   <body class="bg-secondary bg-opacity-10">
+    <%@ include file= "navbar_login.jsp"  %>
     <main>
       <div class="container">
-        <div class="fs-4 fw-bold pb-3">👥 회원 관리</div>
+        <div class="fs-4 fw-bold pb-3 pt-5 mt-4">👥 회원 관리</div>
         <div class="text-secondary">총 3명</div>
         <div class="bg-light ps-4 pe-4 pb-1 mt-2">
           <table class="table text-center border-none">
@@ -261,7 +262,7 @@
         </div>
       </div>
     </main>
-
+    <%@ include file= "footer.jsp" %>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
