@@ -21,22 +21,22 @@
         />
       </head>
 
-    <body>                          
+    <body class="bg-secondary bg-opacity-25">                       
     <% ArrayList<HashMap> question = (ArrayList<HashMap>)request.getAttribute("question");
       ArrayList<HashMap> answer = (ArrayList<HashMap>) request.getAttribute("answer");%>
    
-
+    <main>
     <main class="d-flex align-items-center mt-10" >
         <div class="container" style="margin-top: 120px; margin-bottom: 120px">
         <div class="bg-white p-5 mt-5 mb-5">
-        <div class="fs-2 fw-bold">홀리 피트니스 만족도 설문 조사</div>
+        <div class="fs-2 fw-bold mb-3">홀리 피트니스 만족도 설문 조사</div>
         <form action="" method="post">
        
           <div>
             <% for(int i=0;i<question.size();i++){  
               HashMap<String, Object> questions_list = question.get(i);%>
               <div><%= (i+1) %>. <%= questions_list.get("QUESTION") %></div>
-                <div class="row ">
+                <div class="row">
                     <div class="row mb-3 ">
                         <% for(int j=0;j<answer.size();j++){ 
                         HashMap<String, Object> answers_list = answer.get(j);%>
