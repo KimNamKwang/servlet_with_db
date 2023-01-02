@@ -31,7 +31,10 @@
       <div class="bg-light ps-4 pe-4 pb-1 mt-2 mb-2">
         <table class="table align-middle">
           <form action="/Admin/surveysServlet" onsubmit="return validateForm()" method="get">
-            <% HashMap<String, Object> surveyInfo = (HashMap<String, Object>)request.getAttribute("surveyInfo"); %>
+            <% 
+            HashMap<String, Object> surveyInfo = (HashMap<String, Object>)request.getAttribute("surveyInfo");
+                
+                %> 
             <tr>
             <th>설문조사명 *</th>
             <td>
@@ -54,6 +57,7 @@
                 value="<%= surveyInfo.get("SURVEY_COMMENT") %>"
               />
             </td>
+           
           </tr>
           <tr>
             <th class="text-nowrap">설문기간 *</th>
@@ -102,19 +106,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <% 
-                      ArrayList<HashMap> question_answer_list = (ArrayList<HashMap>)request.getAttribute("question_answer_list"); 
-                    %>
-                    <% 
-                        for(int i = 0; i < question_answer_list.size(); i++) { 
-                          HashMap<String, Object> question_answer = question_answer_list.get(i);
-                        %>
+                    
                     <tr>
-                      <td><%= question_answer.get("QUESTION") %></td>
+                      <td></td>
                       <td>
                         
-                        답항<%= question_answer.get("ORDERS") %>:
-                        <%= question_answer.get("ANSWER") %>
+                        답항
                     
                       </td>
                       <td>
@@ -136,7 +133,7 @@
                         </div>
                       </td>
                     </tr>
-                    <% } %>
+                   
                     <tr>
                       <td>
                         <div class="collapse" id="collapseTarget">
