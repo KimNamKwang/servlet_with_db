@@ -11,14 +11,14 @@ public class Commons {
     public Statement getStatement() {
         String url = "jdbc:mysql://localhost:3306/health_club";
         String user = "root";        
+        //String password = "1q2w3e4r!@#";
         String password = "*khacademy!";
 
         Statement statement = null;
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            System.out.println("연결!");
-        } catch (SQLException e) {
+            } catch (SQLException e) {
             e.printStackTrace();
             
         }

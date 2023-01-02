@@ -14,25 +14,21 @@
 <% 
     HashMap<String, Object> question = (HashMap<String, Object>)request.getAttribute("question");
 %>
+   
 
-    <div> 
-        <a href="/polls/PollServlet?QUESTIONS_UID=Q1">Q1</a> / 
-        <a href="/polls/PollServlet?QUESTIONS_UID=Q2">Q2</a> /
-        <a href="/polls/PollServlet?QUESTIONS_UID=Q3">Q3</a> /
-        <a href="/polls/PollServlet?QUESTIONS_UID=Q4">Q4</a> /
-        <a href="/polls/PollServlet?QUESTIONS_UID=Q5">Q5</a>
-    </div>
+    
+<div>
+    <%= question.get("ORDERS") %>. <%= question.get("QUESTION")%>
+</div>
+
+
     <div>
-        <%= question.get("ORDERS") %>. <%= question.get("QUESTION")%>
-        <%-- <%= question.get("ORDERS") %>. <%= question.get("QUESTION")%> --%>
-        
-    </div>
-    <div>
-        <%--요것은 선언 --%>
+     
         <%
             ArrayList<HashMap> answer_list = null;
             answer_list = (ArrayList<HashMap>)request.getAttribute("answer_list");
         %>
+
         <%
             for(int i=0; i<answer_list.size(); i++){ 
               HashMap<String,Object> answer =  answer_list.get(i);
