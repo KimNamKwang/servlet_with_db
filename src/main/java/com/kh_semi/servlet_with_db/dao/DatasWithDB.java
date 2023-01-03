@@ -86,8 +86,7 @@ public class DatasWithDB {
         String userId = (String) hashMap.get("userId");
         String userPassword = (String) hashMap.get("userPassword");
         String userPasswordCheck = (String) hashMap.get("userPasswordCheck");
-        String email = (String) hashMap.get("emailId") + (String) hashMap.get("emailPlatform")
-                + (String) hashMap.get("emailPlatform_s");
+        String email = (String) hashMap.get("emailId") + "@" + (String) hashMap.get("emailPlatform");
         String phoneNumber = (String) hashMap.get("phoneFirst") + "-" + (String) hashMap.get("phoneSecond")
                 + "-" + (String) hashMap.get("phoneThird");
         String addressId = (String) hashMap.get("addressId");
