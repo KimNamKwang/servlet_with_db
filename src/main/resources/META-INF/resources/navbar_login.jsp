@@ -54,7 +54,7 @@
             >
           </div>
         </div>
-        <a href="loginServlet?logout=yes" class="nav-link">Logout</a>
+        <a href="/loginServlet?logout=yes" class="nav-link">Logout</a>
         <a href="Mypage.jsp" class="nav-link">마이페이지</a>
       </div>
     </div>
