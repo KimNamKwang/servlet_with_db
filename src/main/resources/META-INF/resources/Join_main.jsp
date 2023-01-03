@@ -117,7 +117,7 @@
                   </div>
                   <div class="col-auto">
                     <select class="form-select" name="emailPlatform_s" id="emailPlatform_s">
-                      <option value="choice_email">직접입력</option>
+                      <option value="">직접입력</option>
                       <option value="@naver.com">naver.com</option>
                       <option value="@gmail.com">gmail.com</option>
                       <option value="@daum.net">daum.net</option>
