@@ -23,12 +23,12 @@
           >
           <div id="dropdownTarget" class="dropdown-menu">
             <a
-              href="Statistics_by_member.jsp"
+              href="/Statistics_by_member.jsp"
               class="dropdown-item nav-link text-dark"
               >개인 설문 조회</a
             >
             <a
-              href="Statistics_by_period.jsp"
+              href="/Statistics_by_period.jsp"
               class="dropdown-item nav-link text-dark"
               >전체 설문 조회</a
             >
