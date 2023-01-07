@@ -21,7 +21,8 @@ public class AdminSurveyDetailsServlet extends HttpServlet {
         AdminWithDB adminWithDB = new AdminWithDB();
 
         HashMap<String, Object> surveyInfo = null;
-        
+        HashMap<String, Object> answers = null;
+
         // parameter로 들어온 UID에 해당하는 row만 가져옴
         try {
             surveyInfo = adminWithDB.getSurveyInfoUid(surveyInfo_Uid);
