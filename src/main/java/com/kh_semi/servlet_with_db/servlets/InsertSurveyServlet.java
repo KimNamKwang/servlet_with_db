@@ -19,7 +19,7 @@ public class InsertSurveyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
-        request.getParameter("QUESTION1");
+        request.getParameter("Q1");
         String ID = (String) httpSession.getAttribute("user_Id");
 
         //dao에 있음

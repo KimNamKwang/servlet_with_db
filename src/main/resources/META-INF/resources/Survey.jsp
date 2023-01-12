@@ -42,8 +42,10 @@
                         <% for(int j=0;j<answer.size();j++){ 
                         HashMap<String, Object> answers_list = answer.get(j);%>
                         <div>    
-                        <input type="radio" class="form-check-input" name="radioname<%= (i+1) %>" id="radioid<%= (i+1) %>-<%= (j+1) %>" value="radiovalue<%= (j+1) %>" />
-                        <label for="radio<%= (i+1) %>-<%= (j+1) %>" class="form-check-label"> <%= answers_list.get("ANSWER") %></label>  
+                        
+                          <input type="radio" class="form-check-input" name="Q<%= (i+1) %>" id="radio<%= (i+1) %>-<%= (j+1) %>" value="E<%= (j+1) %>" /> 
+                          <label for="radio<%= (i+1) %>-<%= (j+1) %>" class="form-check-label"> <%= answers_list.get("ANSWER") %></label>
+                        
                         </div>
                         <% } %>
                     </div>
