@@ -21,6 +21,8 @@ public class SurveyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
+
+        //DB 불러오기
         SurveyWithDB surveyWithDB = new SurveyWithDB();
         ArrayList<HashMap> answer = null;
         ArrayList<HashMap> question = null;

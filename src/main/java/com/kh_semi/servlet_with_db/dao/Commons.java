@@ -11,8 +11,8 @@ public class Commons {
     public Statement getStatement() {
         String url = "jdbc:mysql://localhost:3306/health_club";
         String user = "root";
-        String password = "*khacademy!";
-        // String password = "1q2w3e4r!@#";
+        //String password = "*khacademy!";
+        String password = "1q2w3e4r!@#";
         Statement statement = null;
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
