@@ -132,7 +132,7 @@
 
 #### Servlet
 
--[SurveyServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/Survey.java)
+-[SurveyServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/SurveyServlet.java)
 
 #### DB
 
