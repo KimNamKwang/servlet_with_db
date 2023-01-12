@@ -128,4 +128,12 @@
 
 #### JSP
 
+-[Survey.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Survey.jsp)
+
+#### Servlet
+
 -[SurveyServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/Survey.java)
+
+#### DB
+
+-[SurveyWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/SurveyWithDB.java)
