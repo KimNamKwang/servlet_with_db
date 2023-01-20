@@ -36,7 +36,7 @@
             <div>설문내역을 확인하시려면 통계 메뉴를 이용해주세요.</div>
           </div>
           <div class="border-top border-secondary border-opacity-50 mt-4 pt-4">
-            <a class="btn btn-dark btn-lg fw-bold ps-5 pe-5" href="index.html">
+            <a class="btn btn-dark btn-lg fw-bold ps-5 pe-5" href="/index.jsp">
               메인화면
             </a>
           </div>

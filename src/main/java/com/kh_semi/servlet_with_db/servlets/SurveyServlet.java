@@ -21,6 +21,10 @@ public class SurveyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
+
+        String ID = (String) httpSession.getAttribute("USER_ID"); //누가 작성하는지는 알아야지;;
+
+        //DB 불러오기
         SurveyWithDB surveyWithDB = new SurveyWithDB();
         ArrayList<HashMap> answer = null;
         ArrayList<HashMap> question = null;
