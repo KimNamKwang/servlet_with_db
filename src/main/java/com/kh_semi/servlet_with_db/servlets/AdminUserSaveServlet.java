@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/Admin/userSavaServlet")
+@WebServlet(urlPatterns = "/Admin/userSaveServlet")
 public class AdminUserSaveServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -30,14 +30,14 @@ public class AdminUserSaveServlet extends HttpServlet {
         String userPhoneThird = request.getParameter("userPhoneThird");
         String userAddress = request.getParameter("userAddress");
         String userAddressAdd = request.getParameter("userAddressAdd");
-        
+
         // DB email을 '@'를 기준으로 나눠서 변수에 담음
         String phoneNumber = userPhoneFirst + "-" + userPhoneSecond + "-" + userPhoneThird;
         String email = userEmail1 + "@" + userEmail2;
 
         Commons commons = new Commons();
         Statement statement = commons.getStatement();
-        
+
         // 들어온 parameter 데이터대로 DB값 수정하는 SQL문
         String query = "UPDATE USER SET name='" + userName + "' , PASSWORD = '"
                 + userPassword + "', PHONE_NUMBER = '" + phoneNumber + "', USER_EMAIL = '" + email
