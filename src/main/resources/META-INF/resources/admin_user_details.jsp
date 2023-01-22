@@ -33,7 +33,7 @@
         >
           <div>
             <table class="table align-middle">
-              <form action="/Admin/userSavaServlet" class="form" method="post">
+              <form action="/Admin/userSaveServlet" class="form" method="post">
                 <% 
               HashMap<String, Object> userInfo = (HashMap<String, Object>)request.getAttribute("userInfo");
                   

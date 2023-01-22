@@ -57,6 +57,14 @@
                       <td class="text-nowrap"><%=  surveyInfo.get("SURVEY_UP_DATE")  %></td>
                       <td>
                     <form action="/Admin/surveyDetailServlet" method="get">
+                      <input
+                    type="hidden"
+                    class="form-control w-50"
+                    value=""
+                    name="SURVEY_UID"
+                    id="<%=  surveyInfo.get("SURVEY_UID")  %>"
+        
+                  />
                     <div class="text-center">
                       <a class="btn btn-outline-dark btn-sm text-nowrap" href="/Admin/surveyDetailsServlet?Survey_UID=<%= surveyInfo.get("SURVEY_UID")  %></a>">수정</a>
                       <button

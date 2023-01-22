@@ -123,3 +123,21 @@
 <img src="https://avatars.githubusercontent.com/u/109524076?v=4" width="80">
 
 ## 이재현
+
+### 설문지 작성
+
+#### JSP
+
+-[Survey.jsp](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/resources/META-INF/resources/Survey.jsp)
+
+#### Servlet
+
+-[SurveyServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/SurveyServlet.java)
+
+-[InsertSurveyServlet.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/servlets/InsertSurveyServlet.java)
+
+#### DB
+
+-[SurveyWithDB.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/SurveyWithDB.java)
+
+-[InsertSurvey.java](https://github.com/KimNamKwang/servlet_with_db/blob/master/src/main/java/com/kh_semi/servlet_with_db/dao/InsertSurvey.java)

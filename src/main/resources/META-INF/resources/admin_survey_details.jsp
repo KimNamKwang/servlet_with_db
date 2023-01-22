@@ -44,7 +44,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value="홀리 피트니스 만족도 설문 조사"
+                value="<%=  surveyInfo.get("SURVEY_NAME")  %>"
                 required
               />
             </td>
@@ -56,7 +56,7 @@
                 type="text"
                 class="form-control form-control-sm"
                 id=""
-                value="피트니스의 전반적인 부분에 대한 만족도 조사"
+                value="<%=  surveyInfo.get("SURVEY_COMMENT")  %>"
               />
             </td>
            
@@ -69,16 +69,16 @@
                 type="date"
                 name=""
                 id=""
-                value="2022-12-01"
-                min="2022-12-29"
+                value="<%=  surveyInfo.get("SURVEY_START_DATE")  %>"
+                min="<%=  surveyInfo.get("SURVEY_START_DATE")  %>"
               />
               ~ 마감일시
               <input
                 type="date"
                 name=""
                 id=""
-                value="2022-12-31"
-                min="2022-12-01"
+                value="<%=  surveyInfo.get("SURVEY_END_DATE")  %> "
+                min="<%=  surveyInfo.get("SURVEY_END_DATE")  %> "
               />
             </td>
           </tr>
